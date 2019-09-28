@@ -25,27 +25,22 @@ class NextEditTextCardView(context: Context, attrs: AttributeSet?) : CardView(co
     init {
         // 初始化加载lastEditText
         mLastEditText = inflate(R.layout.layout_text_input, this)
-        mLastEditText.hint = "下一步"
-        mLastEditText.hideRightDrawable()
-        mLastEditText.clearFocus()
-        addView(mLastEditText)
-        mLastEditText.setOnEditorActionListener(object : TextView.OnEditorActionListener{
-            override fun onEditorAction(textview: TextView?, actionId: Int, event: KeyEvent?): Boolean {
-                when(actionId) {
-                    EditorInfo.IME_ACTION_UNSPECIFIED -> {
-                        // append一个DeletedEditText
-                        appendEditText(mLastEditText.text.toString())
-                        mLastEditText.setText("")
-                    }
-                }
-                return false
-            }
-        })
+//        mLastEditText.hint = "下一步"
+//        mLastEditText.hideRightDrawable()
+//        mLastEditText.clearFocus()
+//        addView(mLastEditText)
+//        mLastEditText.setOnEditorActionListener { textview, actionId, event ->
+//            when(actionId) {
+//                EditorInfo.IME_ACTION_UNSPECIFIED -> {
+//                    // append一个DeletedEditText
+//                    appendEditText(mLastEditText.text.toString())
+//                    mLastEditText.setText("")
+//                }
+//            }
+//            false
+//        }
     }
 
-    override fun onFinishInflate() {
-        super.onFinishInflate()
-    }
 
     private fun appendEditText(data: String) {
         val commonEditText = inflate<DeletedEditText>(R.layout.layout_text_input, this)
@@ -63,34 +58,34 @@ class NextEditTextCardView(context: Context, attrs: AttributeSet?) : CardView(co
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        val childNum = childCount
-        var totalHeight = 0
-        var totalWidth = 0
-        for (i in (0 until childNum)) {
-            val child = getChildAt(i)
-            measureChild(child, widthMeasureSpec, heightMeasureSpec)
-            totalHeight += child.measuredHeight
-            totalWidth = child.measuredWidth
-        }
-        setMeasuredDimension(totalWidth, totalHeight)
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+//        val childNum = childCount
+//        var totalHeight = 0
+//        var totalWidth = 0
+//        for (i in (0 until childNum)) {
+//            val child = getChildAt(i)
+//            measureChild(child, widthMeasureSpec, heightMeasureSpec)
+//            totalHeight += child.measuredHeight
+//            totalWidth = child.measuredWidth
+//        }
+//        setMeasuredDimension(totalWidth, totalHeight)
     }
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
-//        super.onLayout(changed, left, top, right, bottom)
-        val childNum = childCount
-        var top = 0
-        val right = measuredWidth
-        for (i in (0 until childNum)) {
-            val child = getChildAt(i)
-            child.layout(0, top, right, top + child.measuredHeight)
-            top += child.measuredHeight
-        }
+        super.onLayout(changed, left, top, right, bottom)
+//        val childNum = childCount
+//        var top = 0
+//        val right = measuredWidth
+//        for (i in (0 until childNum)) {
+//            val child = getChildAt(i)
+//            child.layout(0, top, right, top + child.measuredHeight)
+//            top += child.measuredHeight
+//        }
     }
 
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
-    }
+//    override fun onDraw(canvas: Canvas?) {
+//        super.onDraw(canvas)
+//    }
 
     fun setAdapter(adapter: Adapter){
         mAdapter = adapter

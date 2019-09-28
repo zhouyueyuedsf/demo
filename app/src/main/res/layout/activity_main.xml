@@ -13,11 +13,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="go to behavior activity"
-          />
+    />
     <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="go to views activity"
     />
+
+    <Button
+            android:id="@+id/viewpagerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="viewpager"
+    />
+
+    <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="settingActivity"
+    />
+
+    <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="performanceActivity"
+    />
+
 </LinearLayout>
