@@ -9,30 +9,11 @@
         tools:context=".views.ViewActivity">
 
 
-    <!--<com.example.demo.views.nextediitextcardview.NextEditTextCardView-->
-    <!--android:id="@+id/necv_test"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"/>-->
-
-    <!--<com.example.demo.views.nextediitextcardview.MyEditText-->
-    <!--android:background="@null"-->
-    <!--android:drawableLeft="@drawable/ic_clear_black_24dp"-->
-    <!--android:hint="test draw" android:layout_width="match_parent"-->
-    <!--android:layout_height="1000dp"/>-->
-
-    <HorizontalScrollView android:scrollbars="none"
-                          android:layout_width="match_parent"
-                          android:layoutDirection="rtl"
-                          android:layout_height="wrap_content">
-        <com.google.android.material.chip.ChipGroup
-                android:id="@+id/fl_test"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:singleLine="true"
-                app:singleSelection="true"
-                app:item_spacing="10dp">
-
-        </com.google.android.material.chip.ChipGroup>
-    </HorizontalScrollView>
+   <com.example.demo.views.EllipsizeTextView
+       android:id="@+id/tv_with_ell"
+       android:maxLines="2"
+       tools:text="great / satisfying / positive / acceptable /sa. valueable / bad /"
+       android:layout_width="160dp"
+       android:layout_height="wrap_content"/>
 
 </LinearLayout>

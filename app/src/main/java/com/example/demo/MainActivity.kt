@@ -7,6 +7,7 @@ import android.util.Log
 import com.example.demo.behaviors.BehaviorActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.performance.PerformanceActivity
+import com.example.demo.sourcecodelab.SourceActivity
 import com.example.demo.viewpagers.ViewpagerActivity
 import com.example.demo.views.ViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -31,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         }
         button5.setOnClickListener {
             routerTo(PerformanceActivity::class.java)
+        }
+        button6.setOnClickListener {
+            routerTo(SourceActivity::class.java)
         }
     }
 
