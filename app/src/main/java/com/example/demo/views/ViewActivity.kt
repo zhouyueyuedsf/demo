@@ -13,6 +13,6 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
 //        tv_with_ell.maxLines = 1
-        tv_with_ell.setText("great / satisfying / positive / acceptable /sa. valueable / bad /", TextView.BufferType.SPANNABLE)
+//        tv_with_ell.setText("great / satisfying / positive / acceptable /sa. valueable / bad /", TextView.BufferType.SPANNABLE)
     }
 }

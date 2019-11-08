@@ -1,19 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.example.demo.views.material.MyCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.ViewActivity">
+
+
+    <com.example.demo.views.material.MyAppbarLayout
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".views.ViewActivity">
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            app:title="123"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.example.demo.views.material.MyAppbarLayout>
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-   <com.example.demo.views.EllipsizeTextView
-       android:id="@+id/tv_with_ell"
-       android:maxLines="2"
-       tools:text="great / satisfying / positive / acceptable /sa. valueable / bad /"
-       android:layout_width="160dp"
-       android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:gravity="center"
+                android:text="底部还有内容啊！！！" />
 
-</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#009988"
+                android:gravity="center"
+                android:text="标签1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#002288"
+                android:gravity="center"
+                android:text="标签2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#009922"
+                android:gravity="center"
+                android:text="标签3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#00aa88"
+                android:gravity="center"
+                android:text="标签4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#999988"
+                android:gravity="center"
+                android:text="标签5" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.example.demo.views.material.MyCoordinatorLayout>
