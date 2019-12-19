@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">demo</string>
     <string name="title_activity_settings">Settings</string>
-
+    <string name="value">Value</string>
+    <string name="hint">Please input a value...</string>
+    <string name="read">Read</string>
+    <string name="write">Write</string>
+    <string name="clear">Clear</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
@@ -107,4 +111,5 @@
     </string>
     <string name="action_settings">Settings</string>
 
+    <string name="my_appbar_scrolling_view_behavior" translatable="false">com.example.demo.views.material.MyScrollBehavior</string>
 </resources>

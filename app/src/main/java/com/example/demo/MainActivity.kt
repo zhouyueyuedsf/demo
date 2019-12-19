@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.demo.advanced.mmkv.MMKVActivity
+import com.example.demo.advanced.ashmem.Client
 import com.example.demo.behaviors.BehaviorActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.performance.PerformanceActivity
@@ -35,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         }
         button6.setOnClickListener {
             routerTo(SourceActivity::class.java)
+        }
+        button7.setOnClickListener {
+            routerTo(Client::class.java)
+        }
+        button8.setOnClickListener {
+            routerTo(MMKVActivity::class.java)
         }
     }
 

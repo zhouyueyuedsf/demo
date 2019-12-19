@@ -9,22 +9,25 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:sharedUserId="android.uid.system"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".sourcecodelab.SourceActivity"></activity>
-        <activity android:name=".performance.PerformanceActivity"></activity>
+        <activity android:name=".advanced.mmkv.ProcessActivity" />
+        <activity android:name=".sourcecodelab.SourceActivity" />
+        <activity android:name=".performance.PerformanceActivity" />
         <activity
             android:name=".performance.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".lifecycle.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".viewpagers.ViewpagerActivity"></activity>
-        <activity android:name=".views.ViewActivity"></activity>
-        <activity android:name=".behaviors.BehaviorActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".viewpagers.ViewpagerActivity" />
+        <activity android:name=".views.ViewActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".behaviors.BehaviorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +35,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".advanced.ashmem.Client" />
+        <activity android:name=".advanced.mmkv.MMKVActivity" />
+
+        <service
+            android:name=".advanced.ashmem.Server"
+            android:enabled="true"
+            android:permission="TODO"
+            android:process=".Server" />
+        <service
+            android:name=".advanced.mmkv.MMKVServer"
+            android:enabled="true"
+            android:process=".mmkv" />
     </application>
 
 </manifest>
