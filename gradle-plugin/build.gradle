@@ -1,0 +1,54 @@
+apply plugin: 'java-gradle-plugin'
+
+apply plugin: 'kotlin'
+apply plugin: 'maven'
+group 'com.joy.shadow.core'
+version '1.0.0'
+gradlePlugin {
+    plugins {
+        shadow {
+            id = "com.tencent.shadow.plugin"
+            implementationClass = "com.tencent.shadow.core.gradle.ShadowPlugin"
+        }
+    }
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    testImplementation 'junit:junit:4.12'
+    testImplementation gradleTestKit()
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('gradle'))
+        }
+    }
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+buildscript {
+    ext.kotlin_version = '1.3.61'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+repositories {
+    mavenCentral()
+}
