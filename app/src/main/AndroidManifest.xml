@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".views.importantview.ImportantViewActivity"></activity>
         <activity android:name=".advanced.mmkv.ProcessActivity" />
         <activity android:name=".sourcecodelab.SourceActivity" />
         <activity android:name=".performance.PerformanceActivity" />
@@ -25,8 +26,9 @@
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait" />
         <activity android:name=".viewpagers.ViewpagerActivity" />
-        <activity android:name=".views.ViewActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".views.ViewActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".behaviors.BehaviorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

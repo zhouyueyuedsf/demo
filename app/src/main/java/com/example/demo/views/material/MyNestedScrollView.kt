@@ -14,6 +14,11 @@ class MyNestedScrollView(context: Context, attributeSet: AttributeSet) : NestedS
         return b
     }
 
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        Log.d("scrollViewStudy", "height: ${getChildAt(0).measuredHeight}")
+        Log.d("scrollViewStudy", "height: ${measuredHeight}")
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
         super.onLayout(changed, l, t, r, b)
     }
