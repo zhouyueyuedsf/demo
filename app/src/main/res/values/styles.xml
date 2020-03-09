@@ -30,4 +30,29 @@
         <attr name="ellipsize_text" format="string|reference"/>
         <attr name="ellipsize_index" format="integer|reference"/>
     </declare-styleable>
+
+    <declare-styleable name="OcrGridLineView">
+        <attr name="linesWidth" format="dimension" />
+        <attr name="tipTextSize" format="dimension" />
+        <attr name="textMarginBottom" format="dimension" />
+        <attr name="tipText" format="reference" />
+        <attr name="tipTextColor" format="color|reference" />
+        <attr name="tipTextPadding" format="dimension|reference" />
+        <attr name="linesColor" format="color|reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ScannerBarView">
+        <attr name="sbvSrc" format="reference"/>
+    </declare-styleable>
+
+    <!--抗锯齿圆角图片-->
+    <declare-styleable name="RoundSmoothAngleImageView">
+        <attr name="globalRadius" format="dimension" />
+        <attr name="leftTopRadius" format="dimension" />
+        <attr name="rightTopRadius" format="dimension" />
+        <attr name="rightBottomRadius" format="dimension" />
+        <attr name="LeftBottomRadius" format="dimension" />
+    </declare-styleable>
+
 </resources>

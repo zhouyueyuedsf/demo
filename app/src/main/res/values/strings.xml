@@ -110,6 +110,7 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="ocr_guide_line_tip">Parallel to reference lines</string>
 
     <string name="my_appbar_scrolling_view_behavior" translatable="false">com.example.demo.views.material.MyScrollBehavior</string>
 </resources>

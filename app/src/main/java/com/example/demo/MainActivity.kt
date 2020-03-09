@@ -1,9 +1,12 @@
 package com.example.demo
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.advanced.ashmem.Client
 import com.example.demo.behaviors.BehaviorActivity
@@ -43,6 +46,11 @@ class MainActivity : AppCompatActivity() {
         }
         button8.setOnClickListener {
             routerTo(MMKVActivity::class.java)
+        }
+        button9.setOnClickListener {
+//            AlertDialog.Builder(this).setTitle("测试 dialog状态").setPositiveButton("Router to ViewActivity") { dialog, which ->
+//                routerTo(ViewActivity::class.java)
+//            }.create().show()
         }
     }
 
