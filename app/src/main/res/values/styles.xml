@@ -59,7 +59,7 @@
     <style name="BottomSheet" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:background">@drawable/md_corner_shape</item>
-        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsFloating">true</item>
     </style>
 
     <style name="BaseBottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
@@ -67,4 +67,19 @@
     </style>
 
     <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="AVLoadingIndicatorView">
+        <item name="AvMinWidth">48dip</item>
+        <item name="AvMaxWidth">48dip</item>
+        <item name="AvMinHeight">48dip</item>
+        <item name="AvMaxHeight">48dip</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Small">
+        <item name="AvMinWidth">11dp</item>
+        <item name="AvMaxWidth">24dip</item>
+        <item name="AvMinHeight">11dp</item>
+        <item name="AvMaxHeight">24dip</item>
+    </style>
+
 </resources>

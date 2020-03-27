@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="AvMinWidth" format="dimension" />
+        <attr name="AvMaxWidth" format="dimension" />
+        <attr name="AvMinHeight" format="dimension" />
+        <attr name="AvMaxHeight" format="dimension" />
+        <attr name="indicatorColor" format="color" />
+    </declare-styleable>
+
+</resources>

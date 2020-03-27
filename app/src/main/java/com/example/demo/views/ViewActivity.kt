@@ -1,9 +1,11 @@
 package com.example.demo.views
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.demo.R
 import com.example.demo.utils.DeviceOrientationEventListener
@@ -21,7 +23,14 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
         setContentView(R.layout.activity_view)
 
         button1.setOnClickListener {
-            RoundedBottomSheetDialogFragment.newInstance().show(supportFragmentManager, "")
+//            RoundedBottomSheetDialogFragment.newInstance().show(supportFragmentManager, "")
+            AlertDialog.Builder(this).apply {
+                setPositiveButton("ok") { dialog, which ->
+
+                }
+                this.setView(R.layout.fragment_ocr_result_edit)
+                show()
+            }
         }
     }
 

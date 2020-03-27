@@ -3,6 +3,8 @@ package com.example.demo.views.hindictocrlab
 import android.animation.ObjectAnimator
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.Matrix
+import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
@@ -41,11 +43,13 @@ class ScannerBarView constructor(context: Context, attrs: AttributeSet? = null, 
         val a = context.obtainStyledAttributes(attrs, R.styleable.ScannerBarView, defStyleAttr, 0)
         scannerBar?.setImageResource(a.getResourceId(R.styleable.ScannerBarView_sbvSrc, R.mipmap.camera_mask_scanner_bar))
         a.recycle()
+
+
     }
 
     private fun initView(context: Context) {
         scannerBar = ImageView(context)
-        scannerBar?.scaleType = ImageView.ScaleType.CENTER_INSIDE
+        scannerBar?.scaleType = ImageView.ScaleType.FIT_XY
         addView(scannerBar, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
     }
 

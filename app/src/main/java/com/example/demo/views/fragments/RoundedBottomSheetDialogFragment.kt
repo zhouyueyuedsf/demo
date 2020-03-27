@@ -44,7 +44,7 @@ open class RoundedBottomSheetDialogFragment : BottomSheetDialogFragment() {
             (dialog as BottomSheetDialog).behavior.state = BottomSheetBehavior.STATE_EXPANDED
             val bottomSheet = it.findViewById<FrameLayout>(R.id.design_bottom_sheet)
             bottomSheet?.layoutParams?.height = DeviceUtils.getScreenAvailableHeight(it.window)
-            AndroidBug5497Workaround.assistActivity(it.findViewById(android.R.id.content))
+//            AndroidBug5497Workaround.assistActivity(it.findViewById(android.R.id.content))
             it.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
         }
     }

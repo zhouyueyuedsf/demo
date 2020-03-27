@@ -1,4 +1,4 @@
-package com.example.demo.behaviors;
+package com.example.demo.views;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -24,6 +24,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 
 import com.example.demo.R;
+import com.example.demo.behaviors.FullBottomSheetBehavior;
 
 public class FullBottomSheetDialog extends AppCompatDialog {
 
