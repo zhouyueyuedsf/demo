@@ -1,53 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/cardview_dark_background"
     tools:context=".views.ViewActivity">
 
     <Button
         android:id="@+id/button1"
-        android:text="recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Trigger" />
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"/>-->
-
-
-    <com.example.demo.views.importantview.RoundSmoothAngleImageView
-        android:id="@+id/roundSmoothAngleImageView"
-        app:globalRadius="4dp"
-        android:padding="1.5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.example.demo.views.hindictocrlab.VerticalTextView
-        android:layout_width="wrap_content"
-        android:text="4fsdfa1"
-        android:layout_height="wrap_content"/>
-
-    <com.example.demo.views.hindictocrlab.OcrGridLineView
-        android:id="@+id/view_ocr_grid_line"
-        android:visibility="gone"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="62dp"
-        app:linesColor="@color/colorAccent"
-        app:linesWidth="0.5dp"
-        app:textMarginBottom="8dp"
-        app:tipTextPadding="16dp"
-        app:tipTextColor="@color/colorAccent"
-        app:tipText="@string/ocr_guide_line_tip"
-        app:tipTextSize="14sp" />
+        android:layout_height="match_parent">
 
-    <com.example.demo.views.hindictocrlab.ScannerBarView
-        android:id="@+id/scannerBarView"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:orientation="vertical"
+                    android:id="@+id/llContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/shape_cursor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+                    <EditText
+                        android:text="orgin text orgin text orgin textorgin textorgin textorgin textorgin
+            \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin
+              \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
+                \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
+                  \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
+            \n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n
+            textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin text"
+                        android:layout_width="match_parent"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content"/>
+                </androidx.core.widget.NestedScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

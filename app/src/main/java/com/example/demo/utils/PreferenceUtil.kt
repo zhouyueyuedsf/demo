@@ -1,14 +1,12 @@
-package com.youdao.hindict.utils
+package com.example.demo.utils
 
 import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import com.example.demo.MyApplication
 
 
 object PreferenceUtils {
-    var CONTEXT = MyApplication.getInstance()
+    private var CONTEXT = MyApplication.getInstance()
 
     //====================int====================
     @Synchronized
@@ -107,7 +105,7 @@ object PreferenceUtils {
     }
 
     @Synchronized
-    operator fun contains(key: String): Boolean {
+    fun contains(key: String): Boolean {
         return PreferenceManager
             .getDefaultSharedPreferences(CONTEXT).contains(key)
     }
@@ -139,4 +137,6 @@ object PreferenceUtils {
         val sp = CONTEXT.getSharedPreferences("com.youdao.hindict.pref_dict", Context.MODE_PRIVATE)
         return sp.contains(key)
     }
+
+
 }

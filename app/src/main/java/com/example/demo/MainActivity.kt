@@ -1,6 +1,7 @@
 package com.example.demo
 
 import android.content.DialogInterface
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +14,7 @@ import com.example.demo.behaviors.BehaviorActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.performance.PerformanceActivity
 import com.example.demo.sourcecodelab.SourceActivity
+import com.example.demo.utils.PreferenceUtils
 import com.example.demo.viewpagers.ViewpagerActivity
 import com.example.demo.views.ViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -52,6 +54,11 @@ class MainActivity : AppCompatActivity() {
 //                routerTo(ViewActivity::class.java)
 //            }.create().show()
         }
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        PreferenceUtils.contains("123")
+        super.attachBaseContext(newBase)
     }
 
     private fun routerTo(clazz: Class<out Any>) {

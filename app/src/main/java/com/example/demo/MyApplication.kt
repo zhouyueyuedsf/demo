@@ -2,11 +2,9 @@ package com.example.demo
 
 import android.app.Activity
 import android.app.Application
-import android.app.PendingIntent
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import com.youdao.hindict.utils.PreferenceUtils
+import com.example.demo.utils.PreferenceUtils
 
 class MyApplication : Application() {
     companion object {

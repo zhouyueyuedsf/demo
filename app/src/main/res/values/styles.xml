@@ -55,4 +55,16 @@
         <attr name="LeftBottomRadius" format="dimension" />
     </declare-styleable>
 
+    <!-- set the rounded drawable as background to your bottom sheet -->
+    <style name="BottomSheet" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@drawable/md_corner_shape</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
 </resources>

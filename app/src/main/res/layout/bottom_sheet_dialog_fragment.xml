@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:fitsSystemWindows="true"
+        android:id="@+id/scrollView"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/etOriginText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="textMultiLine"
+            android:paddingHorizontal="16dp"
+            android:text="orgin text orgin text orgin textorgin textorgin textorgin textorgin
+            \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin
+              \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
+                \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
+                  \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
+            \n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n
+            textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin text"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </android.support.v4.widget.NestedScrollView>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/share_qq"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@mipmap/ic_launcher" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="分享到QQ" />-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/share_wx"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@mipmap/ic_launcher" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="分享到微信" />-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/share_sina"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@mipmap/ic_launcher" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="分享到微博" />-->
+<!--    </LinearLayout>-->
+
+</LinearLayout>
