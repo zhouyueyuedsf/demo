@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clRoot"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -48,7 +49,8 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/svOriginTextContainer"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivClose">
 
         <EditText
@@ -65,7 +67,9 @@
                 \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
                   \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
             \n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n
-            textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin text"
+            textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin
+            textorgin text orgin text orgin textorgin textorgin textorgin textorgin
+            textorgin text"
             android:textColor="#000000"
             android:textSize="15sp" />
     </androidx.core.widget.NestedScrollView>

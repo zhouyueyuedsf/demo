@@ -1,19 +1,16 @@
 package com.example.demo.views
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AlertDialog
+import android.view.View
+import android.widget.Button
+import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.demo.R
 import com.example.demo.utils.DeviceOrientationEventListener
-import com.example.demo.utils.DeviceUtils
 import com.example.demo.views.fragments.RoundedBottomSheetDialogFragment
-import com.example.demo.views.hindictocrlab.HindictLabActivity
-import com.example.demo.views.importantview.MyDrawable
-import com.example.demo.views.utils.ResourceUtils
 import kotlinx.android.synthetic.main.activity_view.*
 
 class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDeviceOrientationChangedListener {
@@ -21,16 +18,9 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
-
         button1.setOnClickListener {
-//            RoundedBottomSheetDialogFragment.newInstance().show(supportFragmentManager, "")
-            AlertDialog.Builder(this).apply {
-                setPositiveButton("ok") { dialog, which ->
-
-                }
-                this.setView(R.layout.fragment_ocr_result_edit)
-                show()
-            }
+            val fragment = RoundedBottomSheetDialogFragment.newInstance()
+            supportFragmentManager.beginTransaction().add(R.id.contentFrame, fragment, "").commitAllowingStateLoss()
         }
     }
 

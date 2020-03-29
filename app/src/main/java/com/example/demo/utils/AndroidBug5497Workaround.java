@@ -4,6 +4,11 @@ import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.ScrollView;
+
+import androidx.core.widget.NestedScrollView;
+
+import com.example.demo.R;
 
 public class AndroidBug5497Workaround {
     // For more information, see https://issuetracker.google.com/issues/36911528
@@ -20,10 +25,18 @@ public class AndroidBug5497Workaround {
     private AndroidBug5497Workaround(View content) {
         if (content != null) {
             mChildOfContent = content;
+            NestedScrollView scrollView = content.findViewById(R.id.svOriginTextContainer);
             mChildOfContent.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
                 public void onGlobalLayout() {
                     possiblyResizeChildOfContent();
+                    Rect r = new Rect();
+                    mChildOfContent.getWindowVisibleDisplayFrame(r);
+                    int screenHeight = mChildOfContent.getRootView().getHeight();
+                    int heightDiff = screenHeight - r.bottom;
+                    if (heightDiff > 200) {
+                        scrollView.fullScroll(ScrollView.FOCUS_DOWN);
+                    }
                 }
             });
             frameLayoutParams = mChildOfContent.getLayoutParams();

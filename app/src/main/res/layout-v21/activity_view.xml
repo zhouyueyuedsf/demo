@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -49,41 +49,9 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </FrameLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    xmlns:tools="http://schemas.android.com/tools"
-        android:layout_height="wrap_content"
-        android:text="Trigger" />
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-                <androidx.core.widget.NestedScrollView
-                    android:orientation="vertical"
-                    android:id="@+id/llContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:background="@drawable/shape_cursor"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" >
-                    <EditText
-                        android:text="orgin text orgin text orgin textorgin textorgin textorgin textorgin
-            \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin
-              \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
-                \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
-                  \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
-            \n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n
-            textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin text"
-                        android:layout_width="match_parent"
-                        android:textSize="20sp"
-                        android:layout_height="wrap_content"/>
-                </androidx.core.widget.NestedScrollView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </FrameLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>
