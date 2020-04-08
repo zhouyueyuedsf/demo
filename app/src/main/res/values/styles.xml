@@ -41,6 +41,14 @@
         <attr name="linesColor" format="color|reference" />
     </declare-styleable>
 
+    <attr name="fitLine" format="integer"/>
+    <attr name="minTextSize" format="dimension|reference"/>
+
+    <declare-styleable name="AutoFitSizeEditText">
+        <attr name="fitLine" />
+        <attr name="hintTextSize" format="reference|dimension" />
+        <attr name="minTextSize" />
+    </declare-styleable>
 
     <declare-styleable name="ScannerBarView">
         <attr name="sbvSrc" format="reference"/>

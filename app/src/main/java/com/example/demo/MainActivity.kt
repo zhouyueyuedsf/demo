@@ -1,15 +1,13 @@
 package com.example.demo
 
-import android.content.DialogInterface
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import androidx.appcompat.app.AlertDialog
-import com.example.demo.advanced.mmkv.MMKVActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import com.example.demo.advanced.ashmem.Client
+import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.behaviors.BehaviorActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.performance.PerformanceActivity
@@ -53,6 +51,12 @@ class MainActivity : AppCompatActivity() {
 //            AlertDialog.Builder(this).setTitle("测试 dialog状态").setPositiveButton("Router to ViewActivity") { dialog, which ->
 //                routerTo(ViewActivity::class.java)
 //            }.create().show()
+        }
+        etQueryInput.setOnClickListener {
+            // 共享元素
+            val intent = Intent(this, ViewActivity::class.java)
+            val options = ActivityOptionsCompat.makeCustomAnimation(this, R.anim.fade_in_half, R.anim.fade_out)
+            startActivity(intent, options.toBundle())
         }
     }
 

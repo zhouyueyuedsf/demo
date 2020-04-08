@@ -15,7 +15,6 @@ import com.example.demo.R
 import com.example.demo.drawable.RoundBackgroundDrawable
 import com.example.demo.utils.AndroidBug5497Workaround
 import com.example.demo.utils.DeviceUtils
-import com.example.demo.utils.StatusBarUtil
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -53,7 +52,7 @@ open class RoundedBottomSheetDialogFragment : Fragment() {
 //            print("")
 //        }
 //        activity.window
-        StatusBarUtil.setColor(activity, Color.WHITE)
+//        StatusBarUtil.setColor(activity, Color.WHITE)
     }
 
     override fun onStart() {

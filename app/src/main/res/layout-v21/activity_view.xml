@@ -13,42 +13,30 @@
         android:layout_height="wrap_content"
         android:text="Trigger" />
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <com.example.demo.views.importantview.AutoFitSizeEditText
+        android:id="@+id/etQueryInput"
+        android:layoutDirection="rtl"
+        android:layout_marginTop="95dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:imeOptions="actionSearch"
+        android:includeFontPadding="false"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:minLines="1"
+        android:hint="Enter Word or Sentences"
+        android:scrollbarSize="4dp"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        android:textSize="17dp"
+        android:textColorHint="#99B8BCC2"
+        android:textStyle="bold"
+        app:fitLine="1"
+        app:minTextSize="15dp"/>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.core.widget.NestedScrollView
-                    android:orientation="vertical"
-                    android:id="@+id/llContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:background="@drawable/shape_cursor"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" >
-                    <EditText
-                        android:text="orgin text orgin text orgin textorgin textorgin textorgin textorgin
-            \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin
-              \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
-                \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
-                  \n textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgi
-            \n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n \n\n
-            textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin textorgin text orgin text orgin textorgin textorgin textorgin textorgin textorgin text"
-                        android:layout_width="match_parent"
-                        android:textSize="20sp"
-                        android:layout_height="wrap_content"/>
-                </androidx.core.widget.NestedScrollView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </FrameLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <FrameLayout
         android:id="@+id/contentFrame"
