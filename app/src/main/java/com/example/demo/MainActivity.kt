@@ -11,6 +11,7 @@ import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.behaviors.BehaviorActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.performance.PerformanceActivity
+import com.example.demo.services.ServiceActivity
 import com.example.demo.sourcecodelab.SourceActivity
 import com.example.demo.utils.PreferenceUtils
 import com.example.demo.viewpagers.ViewpagerActivity
@@ -57,6 +58,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ViewActivity::class.java)
             val options = ActivityOptionsCompat.makeCustomAnimation(this, R.anim.fade_in_half, R.anim.fade_out)
             startActivity(intent, options.toBundle())
+        }
+        button10.setOnClickListener {
+            routerTo(ServiceActivity::class.java)
         }
     }
 
