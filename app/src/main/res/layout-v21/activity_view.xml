@@ -13,33 +13,44 @@
         android:layout_height="wrap_content"
         android:text="Trigger" />
 
-    <com.example.demo.views.importantview.AutoFitSizeEditText
-        android:id="@+id/etQueryInput"
-        android:layoutDirection="rtl"
-        android:layout_marginTop="95dp"
+    <Button
+        android:id="@+id/button2"
+        android:layout_marginTop="50dp"
+        android:text="Trigger2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.example.demo.views.importantview.OcrResultEditText
+        android:id="@+id/etOcr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null"
-        android:padding="10dp"
-        android:gravity="center_vertical"
-        android:imeOptions="actionSearch"
-        android:includeFontPadding="false"
-        android:inputType="textMultiLine"
-        android:maxLines="5"
-        android:minLines="1"
-        android:hint="Enter Word or Sentences"
-        android:scrollbarSize="4dp"
-        android:scrollbarStyle="insideOverlay"
-        android:scrollbars="vertical"
-        android:textSize="17dp"
-        android:textColorHint="#99B8BCC2"
-        android:textStyle="bold"
-        app:fitLine="1"
-        app:minTextSize="15dp"/>
+        android:layout_marginTop="200dp"
+        android:hint="Ocr Result EditText"
+        android:inputType="textMultiLine" />
 
 
     <FrameLayout
         android:id="@+id/contentFrame"
+        android:layout_marginTop="300dp"
+
+        android:background="@drawable/bg_grey_radius_6"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content" >
+        <com.example.demo.views.importantview.AutoFitSizeEditText
+            android:id="@+id/etTest"
+            android:background="@null"
+            android:hint="input your text"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+
+
 </FrameLayout>

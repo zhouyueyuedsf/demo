@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,18 +9,34 @@
 
     <Button
         android:id="@+id/button1"
-        android:text="recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trigger" />
+
+    <EditText
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <EditText
+    <com.example.demo.views.importantview.OcrResultEditText
+        android:id="@+id/etOcr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom" />
+        android:layout_marginTop="200dp"
+        android:hint="Ocr Result EditText"
+        android:inputType="textMultiLine" />
 
+
+    <com.example.demo.views.importantview.AutoFitSizeEditText
+        android:id="@+id/etTest"
+        android:layout_marginTop="300dp"
+        android:hint="input your text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <FrameLayout
         android:id="@+id/contentFrame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+        android:layout_height="match_parent" />
+
+</FrameLayout>
