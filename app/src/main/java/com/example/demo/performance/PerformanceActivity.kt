@@ -10,15 +10,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.demo.R
 import kotlinx.android.synthetic.main.activity_performance.*
+import kotlinx.android.synthetic.main.activity_scrolling.*
 
 class PerformanceActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_performance)
+        setSupportActionBar(toolbar2)
         rv_root.layoutManager = LinearLayoutManager(this)
         rv_root.adapter = object : RecyclerView.Adapter<MyViewHolder>() {
-            val strings = Array(25) {
+            val strings = Array(10) {
                 "$it"
             }
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

@@ -90,4 +90,32 @@
         <item name="AvMaxHeight">24dip</item>
     </style>
 
+    <declare-styleable name="AutoFitSizeTextView">
+        <attr name="fitLine" />
+        <attr name="addEllipsis" format="boolean" />
+        <attr name="minTextSize" />
+    </declare-styleable>
+
+    <style name="Theme.DialogActivity" parent="AlertDialogTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Button文字的颜色 -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- message的颜色 -->
+        <item name="android:textColorPrimary">#757575</item>
+    </style>
+
 </resources>

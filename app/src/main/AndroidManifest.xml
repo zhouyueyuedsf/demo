@@ -31,8 +31,11 @@
         <activity android:name=".viewpagers.ViewpagerActivity" />
         <activity
             android:name=".views.ViewActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
+            android:taskAffinity=".views"
+            android:process=":udictclip"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:theme="@style/Theme.DialogActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".behaviors.BehaviorActivity" />
         <activity android:name=".MainActivity">
@@ -45,6 +48,7 @@
         <activity android:name=".advanced.ashmem.Client" />
         <activity android:name=".advanced.mmkv.MMKVActivity" />
         <activity android:name=".services.ServiceActivity" />
+        <activity android:name=".views.AccessibilityGuideActivity"  android:theme="@style/Theme.DialogActivity" />
 
         <service
             android:name=".advanced.ashmem.Server"

@@ -1,28 +1,46 @@
 package com.example.demo.views
 
-import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
+import android.os.Handler
+import android.provider.Settings
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
+import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
-import android.widget.Button
-import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.updateLayoutParams
 import com.example.demo.R
+import com.example.demo.performance.PerformanceActivity
 import com.example.demo.utils.DeviceOrientationEventListener
+import com.example.demo.utils.DialogUtils
 import com.example.demo.views.fragments.RoundedBottomSheetDialogFragment
 import kotlinx.android.synthetic.main.activity_view.*
 
+class ViewWrapper(val view: View) {
+    fun setLayoutHeight(layoutHeight: Int) {
+        view.updateLayoutParams<ViewGroup.LayoutParams> {
+            height = layoutHeight
+        }
+    }
+
+    fun getLayoutHeight(): Int {
+        return view.layoutParams.height
+    }
+}
 class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDeviceOrientationChangedListener {
 
+    override fun onNewIntent(intent: Intent?) {
+        Log.d("yyyyyyyy", "run onNewIntent")
+        super.onNewIntent(intent)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("yyyyyyyy", "run onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
         button1.setOnClickListener {
@@ -51,7 +69,7 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
             applyPaddingAndHeightAnim(heightAnimator, paddingAnimator)
         }
         button2.setOnClickListener {
-            etTest.setPadding(0, 300, 0, 300)
+            DialogUtils.showMagicNoticeDialog(this)
         }
     }
 
@@ -84,6 +102,11 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
 //            animator.duration = 300
 //            animator.start()
 //        }
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(android.R.anim.fade_in, R.anim.fade_out)
     }
 
 }

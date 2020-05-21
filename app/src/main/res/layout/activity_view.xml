@@ -13,8 +13,11 @@
         android:layout_height="wrap_content"
         android:text="Trigger" />
 
-    <EditText
+    <TextView
         android:layout_marginTop="100dp"
+        android:text="123412321312312"
+        android:textSize="20dp"
+        android:textIsSelectable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -38,5 +41,21 @@
         android:id="@+id/contentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_marginTop="500dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="100dp">
+        <Button
+            android:text="123"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="123"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
 </FrameLayout>

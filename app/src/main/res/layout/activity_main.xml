@@ -20,6 +20,13 @@
         android:layout_height="wrap_content"
         android:text="go to views activity" />
 
+    <Button
+        android:id="@+id/button2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="launch views activity by NEW TASK FLAGS"
+        />
+
     <TextView
         android:id="@+id/etQueryInput"
         android:layout_width="match_parent"

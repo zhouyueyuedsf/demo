@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
+import android.view.View
 import androidx.core.widget.NestedScrollView
 
 class MyNestedScrollView(context: Context, attributeSet: AttributeSet) : NestedScrollView(context, attributeSet) {
@@ -29,5 +30,16 @@ class MyNestedScrollView(context: Context, attributeSet: AttributeSet) : NestedS
 
     override fun scrollTo(x: Int, y: Int) {
         super.scrollTo(x, y)
+    }
+
+    override fun onNestedPreScroll(target: View, dx: Int, dy: Int, consumed: IntArray) {
+        Log.d("scrollViewStudy", "dy: ${dy}")
+        super.onNestedPreScroll(target, dx, dy, consumed)
+        Log.d("scrollViewStudy", "dy: ${consumed[1]}")
+    }
+
+    override fun onNestedScroll(target: View, dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int) {
+        Log.d("scrollViewStudy", "dxConsumed: ${dxConsumed}")
+        super.onNestedScroll(target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed)
     }
 }

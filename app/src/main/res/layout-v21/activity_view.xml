@@ -20,11 +20,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <EditText
+    <TextView
         android:layout_marginTop="100dp"
+        android:text="123412321312312"
+        android:textSize="20dp"
+        android:textIsSelectable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
     <com.example.demo.views.importantview.OcrResultEditText
         android:id="@+id/etOcr"
         android:layout_width="match_parent"
@@ -41,10 +43,12 @@
         android:background="@drawable/bg_grey_radius_6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-        <com.example.demo.views.importantview.AutoFitSizeEditText
+        <com.example.demo.views.importantview.AutoFitSizeTextView
             android:id="@+id/etTest"
             android:background="@null"
-            android:hint="input your text"
+            android:textSize="20dp"
+            android:textIsSelectable="true"
+            android:text="input your text"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
