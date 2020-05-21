@@ -18,6 +18,7 @@ class PerformanceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_performance)
         setSupportActionBar(toolbar2)
+
         rv_root.layoutManager = LinearLayoutManager(this)
         rv_root.adapter = object : RecyclerView.Adapter<MyViewHolder>() {
             val strings = Array(10) {
