@@ -10,6 +10,10 @@ import java.util.jar.Attributes
 class MyRecyclerView(context: Context, attributeSet: AttributeSet) : RecyclerView(context, attributeSet) {
 
 
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        return super.dispatchTouchEvent(ev)
+    }
+
     override fun onMeasure(widthSpec: Int, heightSpec: Int) {
         Log.d("scrollStudy", "MyRecyclerView height: $measuredHeight")
         Log.d("scrollStudy", "MyRecyclerView offset: ${computeVerticalScrollOffset()}")
@@ -21,10 +25,9 @@ class MyRecyclerView(context: Context, attributeSet: AttributeSet) : RecyclerVie
     }
 
     override fun onTouchEvent(e: MotionEvent?): Boolean {
-        Log.d("eventStudy", "MyRecyclerView actionIndex: ${e?.actionIndex}")
-        Log.d("eventStudy", "MyRecyclerView getPointerId: ${e?.getPointerId(e.actionIndex)}")
-        Log.d("eventStudy", "MyRecyclerView pointerCount: ${e?.pointerCount}")
-        Log.d("eventStudy", "MyRecyclerView findPointerIndex: ${e?.findPointerIndex(e.getPointerId(e.actionIndex))}")
-        return super.onTouchEvent(e)
+        Log.d("eventStudy", "MyRecyclerView onTouchEvent action: ${e?.action}")
+        val v = super.onTouchEvent(e)
+        Log.d("eventStudy", "MyRecyclerView onTouchEvent 消费？: ${v}")
+        return v
     }
 }

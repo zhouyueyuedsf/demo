@@ -32,23 +32,16 @@
 
 <!--    <include layout="@layout/content_scrolling" />-->
 
-    <FrameLayout
+    <com.example.demo.views.importantview.MyLinearLayout
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <com.example.demo.views.importantview.MyLinearLayout
+        <com.example.demo.views.importantview.MyRecyclerView
+            android:id="@+id/rv_root"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <com.example.demo.views.importantview.MyRecyclerView
-                android:id="@+id/rv_root"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent" />
-        </com.example.demo.views.importantview.MyLinearLayout>>
-
-    </FrameLayout>
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.example.demo.views.importantview.MyLinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

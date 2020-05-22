@@ -15,16 +15,26 @@ import androidx.core.view.ViewCompat
  * Create by Administrator on 2020/5/21
  */
 class MyLinearLayout(context: Context, attributeSet: AttributeSet) : LinearLayout(context, attributeSet), NestedScrollingParent2, NestedScrollingChild2 {
-
+    var mLastTouchY = 0f
     override fun onFinishInflate() {
         super.onFinishInflate()
         isNestedScrollingEnabled = true
     }
     private val mChildHelper: NestedScrollingChildHelper = NestedScrollingChildHelper(this)
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        when (ev?.action) {
+        val action = ev?.action
+//        if (action == MotionEvent.ACTION_MOVE) {
+//            return true
+//        }
+        when (action) {
             MotionEvent.ACTION_DOWN -> {
+                mLastTouchY = ev.y
                 startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL, ViewCompat.TYPE_TOUCH)
+            }
+            MotionEvent.ACTION_MOVE -> {
+
+                Log.d("eventStudy", "MyLinearLayout onInterceptTouchEvent ACTION_MOVE ${mLastTouchY - ev.y}")
+                mLastTouchY = ev.y
             }
             MotionEvent.ACTION_UP -> {
                 stopNestedScroll(ViewCompat.TYPE_TOUCH)
@@ -38,7 +48,7 @@ class MyLinearLayout(context: Context, attributeSet: AttributeSet) : LinearLayou
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        Log.d("eventStudy", "MyLinearLayout actionIndex: ${event?.actionIndex}")
+        Log.d("eventStudy", "MyLinearLayout onTouchEvent action: ${event?.action}")
         return super.onTouchEvent(event)
     }
 

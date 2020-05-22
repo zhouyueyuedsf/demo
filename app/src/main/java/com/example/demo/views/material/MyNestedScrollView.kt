@@ -9,9 +9,15 @@ import androidx.core.widget.NestedScrollView
 
 class MyNestedScrollView(context: Context, attributeSet: AttributeSet) : NestedScrollView(context, attributeSet) {
 
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        Log.d("eventStudy", "MyNestedScrollView dispatchTouchEvent action: ${ev?.action}")
+        return super.dispatchTouchEvent(ev)
+    }
+
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
+
+        Log.d("eventStudy", "MyNestedScrollView onInterceptTouchEvent action: ${ev?.action}")
         val b = super.onInterceptTouchEvent(ev)
-        Log.d("MyCoordinatorLayout", "MyNestedScrollView: ${b}")
         return b
     }
 
@@ -25,7 +31,7 @@ class MyNestedScrollView(context: Context, attributeSet: AttributeSet) : NestedS
     }
 
     override fun onTouchEvent(ev: MotionEvent?): Boolean {
-        Log.d("eventStudy", "MyNestedScrollView actionIndex: ${ev?.actionIndex}")
+        Log.d("eventStudy", "MyNestedScrollView action: ${ev?.action}")
         return super.onTouchEvent(ev)
     }
     override fun scrollBy(x: Int, y: Int) {
