@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".lanuchmode.task2.DLaunchModeActivity" android:taskAffinity=".task2"/>
+        <activity android:name=".lanuchmode.task2.CLaunchModeActivity" android:launchMode="singleTask" android:taskAffinity=".task2"/>
+        <activity android:name=".lanuchmode.task1.BLaunchModeActivity" android:taskAffinity=".task1"/>
+        <activity android:name=".lanuchmode.task1.ALaunchModeActivity" android:launchMode="singleTask" android:taskAffinity=".task1" />
+        <activity android:name=".lanuchmode.LaunchModeActivity" />
         <activity
             android:name=".views.hindictocrlab.HindictLabActivity"
             android:screenOrientation="portrait" />
@@ -29,14 +34,7 @@
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait" />
         <activity android:name=".viewpagers.ViewpagerActivity" />
-        <activity
-            android:name=".views.ViewActivity"
-            android:taskAffinity=".views"
-            android:process=":udictclip"
-            android:launchMode="singleTask"
-            android:exported="true"
-            android:theme="@style/Theme.DialogActivity"
-            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".views.ViewActivity" />
         <activity android:name=".behaviors.BehaviorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -48,7 +46,9 @@
         <activity android:name=".advanced.ashmem.Client" />
         <activity android:name=".advanced.mmkv.MMKVActivity" />
         <activity android:name=".services.ServiceActivity" />
-        <activity android:name=".views.AccessibilityGuideActivity"  android:theme="@style/Theme.DialogActivity" />
+        <activity
+            android:name=".views.AccessibilityGuideActivity"
+            android:theme="@style/Theme.DialogActivity" />
 
         <service
             android:name=".advanced.ashmem.Server"

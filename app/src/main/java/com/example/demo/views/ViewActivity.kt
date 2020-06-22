@@ -20,7 +20,9 @@ import com.example.demo.performance.PerformanceActivity
 import com.example.demo.utils.DeviceOrientationEventListener
 import com.example.demo.utils.DialogUtils
 import com.example.demo.views.fragments.RoundedBottomSheetDialogFragment
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_view.*
+import kotlinx.android.synthetic.main.activity_view.button1
 
 class ViewWrapper(val view: View) {
     fun setLayoutHeight(layoutHeight: Int) {
@@ -68,9 +70,9 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
 //            }
             applyPaddingAndHeightAnim(heightAnimator, paddingAnimator)
         }
-        button2.setOnClickListener {
-            DialogUtils.showMagicNoticeDialog(this)
-        }
+//        button2.setOnClickListener {
+//            DialogUtils.showMagicNoticeDialog(this)
+//        }
     }
 
     private fun applyPaddingAndHeightAnim(firstAnimator: ValueAnimator, secondAnimator: ValueAnimator) {

@@ -118,4 +118,11 @@
         <item name="android:textColorPrimary">#757575</item>
     </style>
 
+    <declare-styleable name="RippleButton">
+        <attr name="stroke_color" format="color|reference" />
+        <attr name="stroke_width" format="dimension|reference" />
+        <attr name="solid_color" format="color|reference" />
+        <attr name="solid_corner" format="dimension|reference" />
+    </declare-styleable>
+
 </resources>

@@ -53,24 +53,25 @@ class MyLinearLayout(context: Context, attributeSet: AttributeSet) : LinearLayou
     }
 
     override fun onNestedScrollAccepted(child: View, target: View, axes: Int, type: Int) {
-        Log.d("eventStudy", "onNestedScrollAccepted")
+        Log.d("eventStudy", "MyLinearLayout onNestedScrollAccepted")
     }
 
     override fun onStartNestedScroll(child: View, target: View, axes: Int, type: Int): Boolean {
-        Log.d("eventStudy", "onStartNestedScroll")
+        Log.d("eventStudy", "MyLinearLayout onStartNestedScroll")
         return axes and ViewCompat.SCROLL_AXIS_VERTICAL != 0
     }
 
     override fun onNestedPreScroll(target: View, dx: Int, dy: Int, consumed: IntArray, type: Int) {
-        Log.d("eventStudy", "onNestedPreScroll dy ${dy}")
+        dispatchNestedPreScroll(dx, dy, consumed, null, type)
+        Log.d("eventStudy", "MyLinearLayout onNestedPreScroll dy ${dy}")
     }
 
     override fun onNestedScroll(target: View, dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int, type: Int) {
-        Log.d("eventStudy", "onNestedScroll dxUnconsumed ${dxUnconsumed}")
+        Log.d("eventStudy", "MyLinearLayout onNestedScroll dxUnconsumed ${dxUnconsumed}")
     }
 
     override fun onStopNestedScroll(target: View, type: Int) {
-        Log.d("eventStudy", "onStopNestedScroll")
+        Log.d("eventStudy", "MyLinearLayout onStopNestedScroll")
         mChildHelper.onStopNestedScroll(target)
     }
 

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.demo.advanced.ashmem.Client
 import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.behaviors.BehaviorActivity
+import com.example.demo.lanuchmode.LaunchModeActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.performance.PerformanceActivity
 import com.example.demo.performance.ScrollingActivity
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             routerTo(SettingsActivity::class.java)
         }
         button5.setOnClickListener {
-            routerTo(PerformanceActivity::class.java)
+            routerTo(ScrollingActivity::class.java)
         }
         button6.setOnClickListener {
             routerTo(SourceActivity::class.java)
@@ -89,6 +90,10 @@ class MainActivity : AppCompatActivity() {
         }
         button10.setOnClickListener {
             routerTo(ServiceActivity::class.java)
+        }
+
+        button11.setOnClickListener {
+            routerTo(LaunchModeActivity::class.java)
         }
     }
 

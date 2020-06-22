@@ -58,4 +58,17 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
+    <com.example.demo.views.importantview.RippleButton
+        android:text="RippleButton"
+        android:layout_marginTop="400dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:solid_color="@color/colorPrimary"
+        app:solid_corner="4dp"
+        android:gravity="center"
+        android:paddingVertical="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </FrameLayout>

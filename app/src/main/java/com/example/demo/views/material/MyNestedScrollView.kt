@@ -31,7 +31,7 @@ class MyNestedScrollView(context: Context, attributeSet: AttributeSet) : NestedS
     }
 
     override fun onTouchEvent(ev: MotionEvent?): Boolean {
-        Log.d("eventStudy", "MyNestedScrollView action: ${ev?.action}")
+        Log.d("eventStudy", "MyNestedScrollView onTouchEvent action: ${ev?.action}")
         return super.onTouchEvent(ev)
     }
     override fun scrollBy(x: Int, y: Int) {

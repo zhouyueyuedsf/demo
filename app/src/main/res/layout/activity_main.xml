@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,91 +7,100 @@
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="go to behavior activity" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="go to views activity" />
-
-    <Button
-        android:id="@+id/button2_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="launch views activity by NEW TASK FLAGS"
-        />
-
-    <TextView
-        android:id="@+id/etQueryInput"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:padding="10dp"
-        android:gravity="center_vertical"
-        android:includeFontPadding="false"
-        android:transitionName="input"
-        android:hint="Enter Word or Sentences"
-        android:scrollbarSize="4dp"
-        android:scrollbarStyle="insideOverlay"
-        android:scrollbars="vertical"
-        android:textSize="17dp"
-        android:textColorHint="#99B8BCC2"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="go to behavior activity" />
 
-    <Button
-        android:id="@+id/viewpagerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="viewpager" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="go to views activity" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="settingActivity" />
+        <Button
+            android:id="@+id/button2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="launch views activity by NEW TASK FLAGS"
+            />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="performanceActivity" />
+        <TextView
+            android:id="@+id/etQueryInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:transitionName="input"
+            android:hint="Enter Word or Sentences"
+            android:scrollbarSize="4dp"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical"
+            android:textSize="17dp"
+            android:textColorHint="#99B8BCC2"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SourceActivity" />
+        <Button
+            android:id="@+id/viewpagerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="viewpager" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AshmemTestActivity" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="settingActivity" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="mmkvTestActivity" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="performanceActivity" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SourceActivity" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AshmemTestActivity" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mmkvTestActivity" />
 
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alert View" />
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alert View" />
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start ServiceActivity" />
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start ServiceActivity" />
 
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start LaunchModeActivity" />
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
