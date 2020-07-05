@@ -12,12 +12,12 @@ import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import com.example.demo.R
-import com.example.demo.drawable.RoundBackgroundDrawable
 import com.example.demo.utils.AndroidBug5497Workaround
 import com.example.demo.utils.DeviceUtils
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.youdao.hindict.drawable.RoundBackgroundDrawable
 import kotlinx.android.synthetic.main.fragment_ocr_result_edit.*
 
 /**

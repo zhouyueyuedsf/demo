@@ -9,4 +9,7 @@
         <attr name="indicatorColor" format="color" />
     </declare-styleable>
 
+    <declare-styleable name="PaletteTextView">
+        <attr name="palette_src" format="reference|string"/>
+    </declare-styleable>
 </resources>

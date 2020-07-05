@@ -14,12 +14,12 @@
         android:text="Trigger" />
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="123412321312312"
-        android:textSize="20dp"
         android:textIsSelectable="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textSize="20dp" />
 
     <com.example.demo.views.importantview.OcrResultEditText
         android:id="@+id/etOcr"
@@ -32,10 +32,10 @@
 
     <com.example.demo.views.importantview.AutoFitSizeEditText
         android:id="@+id/etTest"
-        android:layout_marginTop="300dp"
-        android:hint="input your text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:hint="input your text" />
 
     <FrameLayout
         android:id="@+id/contentFrame"
@@ -43,34 +43,29 @@
         android:layout_height="match_parent" />
 
     <LinearLayout
-        android:layout_marginTop="500dp"
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="100dp">
-        <Button
-            android:text="123"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:layout_height="100dp"
+        android:layout_marginTop="500dp"
+        android:gravity="center">
 
         <Button
-            android:text="123"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="123" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123" />
     </LinearLayout>
 
-    <com.example.demo.views.importantview.RippleButton
-        android:text="RippleButton"
+    <com.example.demo.views.PaletteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="400dp"
         android:textColor="@color/white"
-        android:clickable="true"
-        android:focusable="true"
-        android:textSize="20dp"
-        android:layout_marginHorizontal="20dp"
-        app:solid_color="@color/colorPrimary"
-        app:solid_corner="4dp"
-        android:gravity="center"
-        android:paddingVertical="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:text="n. गिनती; सामंत; गणना;आरोप; अभियोग का विषय; संख्या;\n v. गणना करना; गिनना; गिनती करना "
+        app:palette_src="@mipmap/lockscreen_bg_1"
+        tools:background="@mipmap/lockscreen_bg_1" />
 </FrameLayout>

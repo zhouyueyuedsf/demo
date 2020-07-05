@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.PersistableBundle
+import android.util.Log
 import com.example.demo.R
 import com.example.demo.lanuchmode.task1.ALaunchModeActivity
 import com.example.demo.lanuchmode.task1.BLaunchModeActivity
@@ -29,6 +31,46 @@ class LaunchModeActivity : AppCompatActivity() {
                 routerTo(DLaunchModeActivity::class.java, true)
             }, 1000)
         }
+    }
+
+    override fun onRestart() {
+        Log.d("yyyyyy", "onRestart LaunchModeActivity")
+        super.onRestart()
+    }
+
+    override fun onStart() {
+        Log.d("yyyyyy", "onStart LaunchModeActivity")
+        super.onStart()
+    }
+
+    override fun onResume() {
+        Log.d("yyyyyy", "onResume LaunchModeActivity")
+        super.onResume()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        Log.d("yyyyyy", "onSaveInstanceState LaunchModeActivity")
+        super.onSaveInstanceState(outState, outPersistentState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        Log.d("yyyyyy", "onRestoreInstanceState LaunchModeActivity")
+        super.onRestoreInstanceState(savedInstanceState)
+    }
+
+    override fun onPause() {
+        Log.d("yyyyyy", "onPause LaunchModeActivity")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.d("yyyyyy", "onStop LaunchModeActivity")
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        Log.d("yyyyyy", "onDestroy LaunchModeActivity")
+        super.onDestroy()
     }
 
     private fun routerTo(clazz: Class<out Any>, newTask: Boolean = false) {
