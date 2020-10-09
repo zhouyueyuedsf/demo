@@ -32,7 +32,6 @@ class MyLinearLayout(context: Context, attributeSet: AttributeSet) : LinearLayou
                 startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL, ViewCompat.TYPE_TOUCH)
             }
             MotionEvent.ACTION_MOVE -> {
-
                 Log.d("eventStudy", "MyLinearLayout onInterceptTouchEvent ACTION_MOVE ${mLastTouchY - ev.y}")
                 mLastTouchY = ev.y
             }

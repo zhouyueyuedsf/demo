@@ -9,6 +9,13 @@ import java.util.jar.Attributes
 
 class MyRecyclerView(context: Context, attributeSet: AttributeSet) : RecyclerView(context, attributeSet) {
 
+    override fun onInterceptTouchEvent(e: MotionEvent?): Boolean {
+        if (e?.action == MotionEvent.ACTION_DOWN) {
+            parent.requestDisallowInterceptTouchEvent(true)
+        }
+        Log.d("eventStudy", "MyRecyclerView onInterceptTouchEvent action: ${e?.action}")
+        return super.onInterceptTouchEvent(e)
+    }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
         return super.dispatchTouchEvent(ev)
@@ -26,6 +33,7 @@ class MyRecyclerView(context: Context, attributeSet: AttributeSet) : RecyclerVie
 
     override fun onTouchEvent(e: MotionEvent?): Boolean {
         Log.d("eventStudy", "MyRecyclerView onTouchEvent action: ${e?.action}")
+
         val v = super.onTouchEvent(e)
         Log.d("eventStudy", "MyRecyclerView onTouchEvent 消费？: ${v}")
         return v
