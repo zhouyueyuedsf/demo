@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/flRoot"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context=".views.ViewActivity">
 
     <Button
@@ -13,15 +15,43 @@
         android:layout_height="wrap_content"
         android:text="Trigger" />
 
+    <FrameLayout
+        android:id="@+id/flAnimRoot"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:layout_width="170dp"
+        android:layout_height="170dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            app:lottie_imageAssetsFolder="images/"
+            app:lottie_fileName="wave_anim.json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvTips"
+            android:layout_gravity="center"
+            tools:text="Tap the screen"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Tap the screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+
     <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="123412321312312"
-        android:textSize="20dp"
         android:textIsSelectable="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textSize="20dp" />
 
     <com.example.demo.views.importantview.OcrResultEditText
+        android:visibility="gone"
         android:id="@+id/etOcr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,44 +61,45 @@
 
 
     <com.example.demo.views.importantview.AutoFitSizeEditText
+        android:visibility="gone"
         android:id="@+id/etTest"
-        android:layout_marginTop="300dp"
-        android:hint="input your text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:hint="input your text" />
 
     <FrameLayout
+        android:visibility="gone"
         android:id="@+id/contentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <LinearLayout
-        android:layout_marginTop="500dp"
+        android:visibility="gone"
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="100dp">
-        <Button
-            android:text="123"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:layout_height="100dp"
+        android:layout_marginTop="500dp"
+        android:gravity="center">
 
         <Button
-            android:text="123"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="123" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123" />
     </LinearLayout>
 
-    <com.example.demo.views.importantview.RippleButton
-        android:text="RippleButton"
+    <com.example.demo.views.PaletteTextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="400dp"
         android:textColor="@color/white"
-        android:textSize="20dp"
-        android:layout_marginHorizontal="20dp"
-        app:solid_color="@color/colorPrimary"
-        app:solid_corner="4dp"
-        android:gravity="center"
-        android:paddingVertical="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:text="n. गिनती; सामंत; गणना;आरोप; अभियोग का विषय; संख्या;\n v. गणना करना; गिनना; गिनती करना "
+        app:palette_src="@mipmap/lockscreen_bg_1"
+        tools:background="@mipmap/lockscreen_bg_1" />
 </FrameLayout>

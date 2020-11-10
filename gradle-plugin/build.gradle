@@ -16,13 +16,25 @@ gradlePlugin {
 dependencies {
     implementation gradleApi()
     implementation localGroovy()
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.1'
     testImplementation gradleTestKit()
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+// type是task的父类，不是任务的参数
+task jar1(type: Jar)
+version '1.1.0'
+def publishFile = file('build/ivy.xml')
+artifacts {
+    println("artifacts = $artifacts")
+    archives jar1, publishFile
 }
 
 uploadArchives {
     repositories {
+        flatDir {
+            name "gradle-plugin"
+            dir "$projectDir/libs"
+        }
         mavenDeployer {
             repository(url: uri('gradle'))
         }
@@ -41,12 +53,8 @@ compileTestKotlin {
     }
 }
 buildscript {
-    ext.kotlin_version = '1.3.61'
     repositories {
         mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 repositories {

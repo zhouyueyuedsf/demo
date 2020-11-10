@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/flRoot"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context=".views.ViewActivity">
 
     <Button
@@ -13,7 +15,39 @@
         android:layout_height="wrap_content"
         android:text="Trigger" />
 
+    <FrameLayout
+        android:id="@+id/flAnimRoot"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:layout_width="170dp"
+        android:layout_height="170dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            app:lottie_imageAssetsFolder="images/"
+            app:lottie_fileName="wave_anim.json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvTips"
+            android:layout_gravity="center"
+            tools:text="Tap the screen"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Tap the screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/guide_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/guide_page2" />
+
     <TextView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -22,6 +56,7 @@
         android:textSize="20dp" />
 
     <com.example.demo.views.importantview.OcrResultEditText
+        android:visibility="gone"
         android:id="@+id/etOcr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,6 +66,7 @@
 
 
     <com.example.demo.views.importantview.AutoFitSizeEditText
+        android:visibility="gone"
         android:id="@+id/etTest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,11 +74,13 @@
         android:hint="input your text" />
 
     <FrameLayout
+        android:visibility="gone"
         android:id="@+id/contentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <LinearLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="500dp"
@@ -60,6 +98,7 @@
     </LinearLayout>
 
     <com.example.demo.views.PaletteTextView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"

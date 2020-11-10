@@ -1,13 +1,13 @@
 package com.example.demo.views
 
+import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Intent
 import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Bundle
-import android.os.Handler
-import android.provider.Settings
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
@@ -15,14 +15,12 @@ import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.updateLayoutParams
+import com.airbnb.lottie.LottieDrawable
 import com.example.demo.R
-import com.example.demo.performance.PerformanceActivity
 import com.example.demo.utils.DeviceOrientationEventListener
-import com.example.demo.utils.DialogUtils
-import com.example.demo.views.fragments.RoundedBottomSheetDialogFragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.demo.utils.dp
 import kotlinx.android.synthetic.main.activity_view.*
-import kotlinx.android.synthetic.main.activity_view.button1
+
 
 class ViewWrapper(val view: View) {
     fun setLayoutHeight(layoutHeight: Int) {
@@ -45,9 +43,47 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
         Log.d("yyyyyyyy", "run onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
+        lottieAnimationView.repeatCount = 0
+        lottieAnimationView.repeatMode = LottieDrawable.RESTART
+
+//        showAlphaAnim()
+        lottieAnimationView?.addAnimatorListener(object : Animator.AnimatorListener {
+            override fun onAnimationRepeat(animation: Animator?) {
+                Log.d("yyyyyy", "onAnimationRepeat")
+            }
+
+            override fun onAnimationEnd(animation: Animator?, isReverse: Boolean) {
+                Log.d("yyyyyy", "onAnimationEnd isReverse")
+            }
+
+            override fun onAnimationEnd(animation: Animator?) {
+                Log.d("yyyyyy", "onAnimationEnd")
+            }
+
+            override fun onAnimationCancel(animation: Animator?) {
+                Log.d("yyyyyy", "onAnimationCancel")
+            }
+
+            override fun onAnimationStart(animation: Animator?) {
+                Log.d("yyyyyy", "animation start")
+                showGuideTvAlphaAnim()
+            }
+        })
+        lottieAnimationView.post {
+            lottieAnimationView.playAnimation()
+        }
         button1.setOnClickListener {
-            val fragment = RoundedBottomSheetDialogFragment.newInstance()
-            supportFragmentManager.beginTransaction().add(R.id.contentFrame, fragment, "").commitAllowingStateLoss()
+//            val fragment = RoundedBottomSheetDialogFragment.newInstance()
+//            supportFragmentManager.beginTransaction().add(R.id.contentFrame, fragment, "").commitAllowingStateLoss()
+            flRoot.removeView(flAnimRoot)
+            lottieAnimationView.cancelAnimation()
+            val dm = resources.displayMetrics
+
+            val height = dm.heightPixels
+            val width = dm.widthPixels
+            println("densityDpi = ${Resources.getSystem().displayMetrics.densityDpi}")
+            println("density = ${Resources.getSystem().displayMetrics.density}")
+            println("height = " + guide_view?.height + "dpHeihgt ${407.dp}")
         }
 //        etOcr.setOnEditorActionListener { v, actionId, event ->
 //            Log.d("InputConnectionFix", "setOnEditorActionListener: ${event.keyCode}")
@@ -57,22 +93,31 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
 //            Log.d("InputConnectionFix", "setOnKeyListener: ${event.keyCode}")
 //            return@setOnKeyListener true
 //        }
-        button1.setOnClickListener {
-            val heightAnimator = ObjectAnimator.ofInt(etTest, "height", etTest.height, etTest.height + 70)
-            heightAnimator.addUpdateListener {
-                println("yyyyyy heightAnimator ${it.animatedValue as Int}")
-            }
-            val paddingAnimator = ObjectAnimator.ofInt(etTest.paddingBottom, etTest.paddingBottom)
-//            paddingAnimator.addUpdateListener { value ->
-//                etTest.apply {
-//                    setPadding(paddingLeft, value.animatedValue as Int, paddingRight, value.animatedValue as Int)
-//                }
+//        button1.setOnClickListener {
+//            val heightAnimator = ObjectAnimator.ofInt(etTest, "height", etTest.height, etTest.height + 70)
+//            heightAnimator.addUpdateListener {
+//                println("yyyyyy heightAnimator ${it.animatedValue as Int}")
 //            }
-            applyPaddingAndHeightAnim(heightAnimator, paddingAnimator)
-        }
+//            val paddingAnimator = ObjectAnimator.ofInt(etTest.paddingBottom, etTest.paddingBottom)
+////            paddingAnimator.addUpdateListener { value ->
+////                etTest.apply {
+////                    setPadding(paddingLeft, value.animatedValue as Int, paddingRight, value.animatedValue as Int)
+////                }
+////            }
+//            applyPaddingAndHeightAnim(heightAnimator, paddingAnimator)
+//        }
 //        button2.setOnClickListener {
 //            DialogUtils.showMagicNoticeDialog(this)
 //        }
+    }
+
+    private fun showGuideTvAlphaAnim() {
+        val alphaAnim = ObjectAnimator.ofFloat(tvTips, "alpha", 0f, 1.0f, 0f)
+        alphaAnim.repeatMode = ObjectAnimator.RESTART
+        alphaAnim.repeatCount = ObjectAnimator.INFINITE
+        alphaAnim.interpolator = LinearInterpolator()
+        alphaAnim.duration = 3000
+        alphaAnim.start()
     }
 
     private fun applyPaddingAndHeightAnim(firstAnimator: ValueAnimator, secondAnimator: ValueAnimator) {
