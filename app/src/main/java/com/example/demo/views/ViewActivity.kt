@@ -8,7 +8,9 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
+import android.view.Choreographer
 import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
@@ -24,28 +26,51 @@ import kotlinx.android.synthetic.main.activity_view.*
 
 class ViewWrapper(val view: View) {
     fun setLayoutHeight(layoutHeight: Int) {
-        view.updateLayoutParams<ViewGroup.LayoutParams> {
-            height = layoutHeight
-        }
+//        view.updateLayoutParams<ViewGroup.LayoutParams> {
+//            height = layoutHeight
+//        }
     }
 
     fun getLayoutHeight(): Int {
         return view.layoutParams.height
     }
 }
-class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDeviceOrientationChangedListener {
 
+class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDeviceOrientationChangedListener {
+    val choreographer = Choreographer.getInstance()
+    val TAG = this.javaClass.name
     override fun onNewIntent(intent: Intent?) {
         Log.d("yyyyyyyy", "run onNewIntent")
         super.onNewIntent(intent)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.d("yyyyyyyy", "run onCreate")
+        Log.d(TAG, "onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
         lottieAnimationView.repeatCount = 0
         lottieAnimationView.repeatMode = LottieDrawable.RESTART
+        choreographer.postFrameCallback {
+            // 第一帧返回，还没测量
+            Handler().post {
+                Log.d(TAG, "post after postFrameCallBack width = ${lottieAnimationView.width}, height = ${lottieAnimationView.height}")
+            }
+        }
 
+        Handler().post {
+            Log.d(TAG, "directly post width = ${lottieAnimationView.width}, height = ${lottieAnimationView.height}")
+        }
+
+        Handler().post {
+            Handler().post {
+                Log.d(TAG, "directly two post width = ${lottieAnimationView.width}, height = ${lottieAnimationView.height}")
+            }
+        }
+
+        button1.post {
+            Log.d(TAG, "view post width = ${lottieAnimationView.width}, height = ${lottieAnimationView.height}")
+        }
 //        showAlphaAnim()
         lottieAnimationView?.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationRepeat(animation: Animator?) {
@@ -109,6 +134,11 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
 //        button2.setOnClickListener {
 //            DialogUtils.showMagicNoticeDialog(this)
 //        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "onResume")
     }
 
     private fun showGuideTvAlphaAnim() {

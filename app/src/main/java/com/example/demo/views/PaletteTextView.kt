@@ -32,15 +32,15 @@ class PaletteTextView(context: Context, attributeSet: AttributeSet) : AppCompatT
         if (paletteDrawable == null) {
             val paletteUrl = ta.getString(R.styleable.PaletteTextView_palette_src)
             if (paletteUrl != null) {
-                MainScope().launch {
-                    launch(Dispatchers.IO) {
-                        val swatch = Palette.from(Glide.with(context).load(paletteUrl).asBitmap().into(360, 640).get()).generate().getVibrantSwatch()
-                        if (swatch != null) {
-                            adaptColor = swatch.rgb
-                        }
-                    }.join()
-                    setColor(adaptColor)
-                }
+//                MainScope().launch {
+//                    launch(Dispatchers.IO) {
+//                        val swatch = Palette.from(Glide.with(context).load(paletteUrl).asBitmap().into(360, 640).get()).generate().getVibrantSwatch()
+//                        if (swatch != null) {
+//                            adaptColor = swatch.rgb
+//                        }
+//                    }.join()
+//                    setColor(adaptColor)
+//                }
             }
         } else {
             MainScope().launch {

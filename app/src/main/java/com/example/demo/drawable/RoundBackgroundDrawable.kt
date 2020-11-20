@@ -31,8 +31,8 @@ class RoundBackgroundDrawable : Drawable() {
 
     override fun setBounds(bounds: Rect) {
         super.setBounds(bounds)
-        mMainPath.addRoundRect(bounds.toRectF(), mRadius, Path.Direction.CCW)
-        mOverlayPath.addRect(bounds.toRectF(), Path.Direction.CCW)
+//        mMainPath.addRoundRect(bounds.toRectF(), mRadius, Path.Direction.CCW)
+//        mOverlayPath.addRect(bounds.toRectF(), Path.Direction.CCW)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             mOverlayPath.op(mMainPath, Path.Op.DIFFERENCE)
         }
@@ -40,7 +40,7 @@ class RoundBackgroundDrawable : Drawable() {
 
     fun setRadius(radius: FloatArray) {
         mRadius = radius
-        mMainPath.addRoundRect(bounds.toRectF(), mRadius, Path.Direction.CCW)
+//        mMainPath.addRoundRect(bounds.toRectF(), mRadius, Path.Direction.CCW)
     }
 
     override fun draw(canvas: Canvas) {
