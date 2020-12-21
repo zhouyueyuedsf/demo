@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:id="@+id/flRoot"
     android:orientation="vertical"
-    android:background="@color/colorAccent"
     tools:context=".views.ViewActivity">
 
     <Button
@@ -46,8 +45,9 @@
         android:layout_height="wrap_content"
         android:src="@drawable/guide_page2" />
 
-    <TextView
-        android:visibility="gone"
+    <com.example.demo.views.EllipsizeTextView
+        android:id="@+id/tvTest"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -65,13 +65,14 @@
         android:inputType="textMultiLine" />
 
 
-    <com.example.demo.views.importantview.AutoFitSizeEditText
-        android:visibility="gone"
+    <EditText
+        android:visibility="visible"
         android:id="@+id/etTest"
-        android:layout_width="match_parent"
+        android:text="123"
+        android:layoutDirection="rtl"
+        android:layout_width="200dp "
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:hint="input your text" />
+        android:layout_marginTop="370dp"/>
 
     <FrameLayout
         android:visibility="gone"

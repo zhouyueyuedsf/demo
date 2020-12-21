@@ -3,11 +3,20 @@ package com.example.demo.lifecycle
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
 import androidx.preference.PreferenceFragmentCompat
 import com.example.demo.R
 
+class LifecycleTest : LifecycleObserver {
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+    fun onCreate() {
+        Log.d("joy", "LifecycleTest onCreate")
+    }
+}
 class SettingsActivity : AppCompatActivity() {
-
+    var lifecycleTest = LifecycleTest()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_activity)
@@ -26,6 +35,7 @@ class SettingsActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        lifecycle.addObserver(lifecycleTest)
         Log.d("joy", "SettingsActivity onStart")
     }
 

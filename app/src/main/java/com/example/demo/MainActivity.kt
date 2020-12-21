@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         Log.d("yyyyyyyy", "run MainActivity onNewIntent")
         super.onNewIntent(intent)
     }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         super.onCreate(savedInstanceState)
@@ -99,6 +101,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context?) {
         PreferenceUtils.contains("123")
+        Log.d("yyyyyy", "MainActivity attachBaseContext $newBase")
         super.attachBaseContext(newBase)
     }
 

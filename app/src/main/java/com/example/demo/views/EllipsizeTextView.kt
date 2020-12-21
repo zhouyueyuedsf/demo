@@ -1,11 +1,13 @@
 package com.example.demo.views
 
 import android.content.Context
+import android.graphics.Canvas
 import android.text.Layout
 import android.text.SpannableStringBuilder
 import android.text.TextUtils
 import android.text.style.CharacterStyle
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.example.demo.R
@@ -200,6 +202,11 @@ class EllipsizeTextView @JvmOverloads constructor(context: Context, attrs: Attri
         this.mEllipsizeIndex = ellipsizeIndex
     }
 
+    override fun onDraw(canvas: Canvas?) {
+        Log.d("yyyyyy", "EliipsizeTextView onDraw")
+        super.onDraw(canvas)
+    }
+
     class Range<T : Comparable<T>>(val lower: T, val upper: T) {
 
         init {
@@ -215,6 +222,7 @@ class EllipsizeTextView @JvmOverloads constructor(context: Context, attrs: Attri
             return gteLower && lteUpper
         }
     }
+
 
 
 }

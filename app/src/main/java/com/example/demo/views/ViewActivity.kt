@@ -4,6 +4,7 @@ import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.content.res.Resources
@@ -39,14 +40,19 @@ class ViewWrapper(val view: View) {
 class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDeviceOrientationChangedListener {
     val choreographer = Choreographer.getInstance()
     val TAG = this.javaClass.name
+
+    override fun attachBaseContext(newBase: Context?) {
+        Log.d("yyyyyy", "ViewActivity attachBaseContext $newBase")
+        super.attachBaseContext(newBase)
+    }
+
     override fun onNewIntent(intent: Intent?) {
-        Log.d("yyyyyyyy", "run onNewIntent")
+        Log.d("yyyyyyyy", "ViewActivity run onNewIntent")
         super.onNewIntent(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d("yyyyyyyy", "run onCreate")
-        Log.d(TAG, "onCreate")
+        Log.d("yyyyyy", "ViewActivity run onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
         lottieAnimationView.repeatCount = 0
@@ -98,17 +104,18 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
             lottieAnimationView.playAnimation()
         }
         button1.setOnClickListener {
+            tvTest.text = "12312"
 //            val fragment = RoundedBottomSheetDialogFragment.newInstance()
 //            supportFragmentManager.beginTransaction().add(R.id.contentFrame, fragment, "").commitAllowingStateLoss()
-            flRoot.removeView(flAnimRoot)
-            lottieAnimationView.cancelAnimation()
-            val dm = resources.displayMetrics
-
-            val height = dm.heightPixels
-            val width = dm.widthPixels
-            println("densityDpi = ${Resources.getSystem().displayMetrics.densityDpi}")
-            println("density = ${Resources.getSystem().displayMetrics.density}")
-            println("height = " + guide_view?.height + "dpHeihgt ${407.dp}")
+//            flRoot.removeView(flAnimRoot)
+//            lottieAnimationView.cancelAnimation()
+//            val dm = resources.displayMetrics
+//
+//            val height = dm.heightPixels
+//            val width = dm.widthPixels
+//            println("densityDpi = ${Resources.getSystem().displayMetrics.densityDpi}")
+//            println("density = ${Resources.getSystem().displayMetrics.density}")
+//            println("height = " + guide_view?.height + "dpHeihgt ${407.dp}")
         }
 //        etOcr.setOnEditorActionListener { v, actionId, event ->
 //            Log.d("InputConnectionFix", "setOnEditorActionListener: ${event.keyCode}")
