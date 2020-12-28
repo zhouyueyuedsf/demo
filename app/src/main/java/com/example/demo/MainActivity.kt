@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.provider.Settings
 import android.util.Log
+import android.view.KeyEvent
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import com.example.demo.advanced.ashmem.Client
@@ -64,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             routerTo(SettingsActivity::class.java)
         }
         button5.setOnClickListener {
-            routerTo(ScrollingActivity::class.java)
+            routerTo(PerformanceActivity::class.java)
         }
         button6.setOnClickListener {
             routerTo(SourceActivity::class.java)
@@ -127,6 +128,11 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d("joy", "MainActivity onDestroy")
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        Log.d("joy", "MainActivity onKeyDown keyCode = $keyCode")
+        return super.onKeyDown(keyCode, event)
     }
 
     override fun finish() {

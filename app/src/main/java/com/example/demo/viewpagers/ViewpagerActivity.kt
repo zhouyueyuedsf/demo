@@ -10,7 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.demo.R
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_viewpager.*
 
 class ViewpagerActivity : AppCompatActivity() {
@@ -25,28 +28,19 @@ class ViewpagerActivity : AppCompatActivity() {
             tv.text = data
             textviews.add(tv)
         }
-        viewpager_main.adapter = object : PagerAdapter() {
-            override fun isViewFromObject(view: View, `object`: Any): Boolean {
-                return view === `object`
-            }
 
-            override fun getCount(): Int {
+        viewpagerMain.post {
+            viewpagerMain.currentItem = 1
+        }
+        viewpagerMain.adapter = object : FragmentStateAdapter(this) {
+            override fun getItemCount(): Int {
                 return datas.size
             }
 
-            override fun instantiateItem(container: ViewGroup, position: Int): Any {
-                val tv = textviews[position]
-                container.addView(tv)
-                return tv
-            }
-
-            override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-                container.removeView(`object` as TextView)
-            }
+            override fun createFragment(position: Int): Fragment = SimpleFragment()
         }
-        viewpager_main.post {
-            viewpager_main.currentItem = 1
-        }
-
+        TabLayoutMediator(tabs, viewpagerMain) { tab, position ->
+            tab.text = datas[position]
+        }.attach()
     }
 }

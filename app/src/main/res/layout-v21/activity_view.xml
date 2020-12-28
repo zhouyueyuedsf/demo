@@ -14,6 +14,13 @@
         android:layout_height="wrap_content"
         android:text="Trigger" />
 
+    <Button
+        android:id="@+id/viewpagerEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="go to viewpager" />
+
     <FrameLayout
         android:id="@+id/flAnimRoot"
         android:layout_marginTop="100dp"

@@ -22,6 +22,8 @@ import com.airbnb.lottie.LottieDrawable
 import com.example.demo.R
 import com.example.demo.utils.DeviceOrientationEventListener
 import com.example.demo.utils.dp
+import com.example.demo.viewpagers.ViewpagerActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_view.*
 
 
@@ -74,9 +76,6 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
             }
         }
 
-        button1.post {
-            Log.d(TAG, "view post width = ${lottieAnimationView.width}, height = ${lottieAnimationView.height}")
-        }
 //        showAlphaAnim()
         lottieAnimationView?.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationRepeat(animation: Animator?) {
@@ -103,44 +102,9 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
         lottieAnimationView.post {
             lottieAnimationView.playAnimation()
         }
-        button1.setOnClickListener {
-            tvTest.text = "12312"
-//            val fragment = RoundedBottomSheetDialogFragment.newInstance()
-//            supportFragmentManager.beginTransaction().add(R.id.contentFrame, fragment, "").commitAllowingStateLoss()
-//            flRoot.removeView(flAnimRoot)
-//            lottieAnimationView.cancelAnimation()
-//            val dm = resources.displayMetrics
-//
-//            val height = dm.heightPixels
-//            val width = dm.widthPixels
-//            println("densityDpi = ${Resources.getSystem().displayMetrics.densityDpi}")
-//            println("density = ${Resources.getSystem().displayMetrics.density}")
-//            println("height = " + guide_view?.height + "dpHeihgt ${407.dp}")
+        viewpagerEnter.setOnClickListener {
+            routerTo(ViewpagerActivity::class.java)
         }
-//        etOcr.setOnEditorActionListener { v, actionId, event ->
-//            Log.d("InputConnectionFix", "setOnEditorActionListener: ${event.keyCode}")
-//            return@setOnEditorActionListener true
-//        }
-//        etOcr.setOnKeyListener { v, keyCode, event ->
-//            Log.d("InputConnectionFix", "setOnKeyListener: ${event.keyCode}")
-//            return@setOnKeyListener true
-//        }
-//        button1.setOnClickListener {
-//            val heightAnimator = ObjectAnimator.ofInt(etTest, "height", etTest.height, etTest.height + 70)
-//            heightAnimator.addUpdateListener {
-//                println("yyyyyy heightAnimator ${it.animatedValue as Int}")
-//            }
-//            val paddingAnimator = ObjectAnimator.ofInt(etTest.paddingBottom, etTest.paddingBottom)
-////            paddingAnimator.addUpdateListener { value ->
-////                etTest.apply {
-////                    setPadding(paddingLeft, value.animatedValue as Int, paddingRight, value.animatedValue as Int)
-////                }
-////            }
-//            applyPaddingAndHeightAnim(heightAnimator, paddingAnimator)
-//        }
-//        button2.setOnClickListener {
-//            DialogUtils.showMagicNoticeDialog(this)
-//        }
     }
 
     override fun onResume() {
