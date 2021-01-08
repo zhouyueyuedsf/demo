@@ -100,6 +100,7 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
             }
         })
         lottieAnimationView.post {
+            Log.d("yyyyyy", "lottieAnimationView start ")
             lottieAnimationView.playAnimation()
         }
         viewpagerEnter.setOnClickListener {

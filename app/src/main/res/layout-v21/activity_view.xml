@@ -52,6 +52,14 @@
         android:layout_height="wrap_content"
         android:src="@drawable/guide_page2" />
 
+    <ImageView
+        android:src="@drawable/ic_group_383"
+        android:layout_gravity="bottom"
+        android:tint="@color/colorPrimary"
+
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
+
     <com.example.demo.views.EllipsizeTextView
         android:id="@+id/tvTest"
         android:visibility="visible"

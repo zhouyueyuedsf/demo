@@ -13,10 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".lanuchmode.task2.DLaunchModeActivity" android:taskAffinity=".task2"/>
-        <activity android:name=".lanuchmode.task2.CLaunchModeActivity" android:launchMode="singleTask" android:taskAffinity=".task2"/>
-        <activity android:name=".lanuchmode.task1.BLaunchModeActivity" android:taskAffinity=".task1"/>
-        <activity android:name=".lanuchmode.task1.ALaunchModeActivity" android:launchMode="singleTask" android:taskAffinity=".task1" />
+        <activity android:name=".activity.MainActivity" />
+        <activity
+            android:name=".lanuchmode.task2.DLaunchModeActivity"
+            android:taskAffinity=".task2" />
+        <activity
+            android:name=".lanuchmode.task2.CLaunchModeActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity=".task2" />
+        <activity
+            android:name=".lanuchmode.task1.BLaunchModeActivity"
+            android:taskAffinity=".task1" />
+        <activity
+            android:name=".lanuchmode.task1.ALaunchModeActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity=".task1" />
         <activity android:name=".lanuchmode.LaunchModeActivity" />
         <activity
             android:name=".views.hindictocrlab.HindictLabActivity"
