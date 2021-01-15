@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.demo.advanced.ashmem.Client
 import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.behaviors.BehaviorActivity
+import com.example.demo.gps.GpsActivity
 import com.example.demo.lanuchmode.LaunchModeActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.performance.PerformanceActivity
@@ -97,6 +98,10 @@ class MainActivity : AppCompatActivity() {
 
         button11.setOnClickListener {
             routerTo(LaunchModeActivity::class.java)
+        }
+
+        button12.setOnClickListener {
+            routerTo(GpsActivity::class.java)
         }
     }
 

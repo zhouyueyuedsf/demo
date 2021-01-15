@@ -7,10 +7,12 @@
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
@@ -27,25 +29,24 @@
             android:id="@+id/button2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="launch views activity by NEW TASK FLAGS"
-            />
+            android:text="launch views activity by NEW TASK FLAGS" />
 
         <TextView
             android:id="@+id/etQueryInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:padding="10dp"
             android:gravity="center_vertical"
-            android:includeFontPadding="false"
-            android:transitionName="input"
             android:hint="Enter Word or Sentences"
+            android:includeFontPadding="false"
+            android:padding="10dp"
             android:scrollbarSize="4dp"
             android:scrollbarStyle="insideOverlay"
             android:scrollbars="vertical"
-            android:textSize="17dp"
             android:textColorHint="#99B8BCC2"
-            android:textStyle="bold" />
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:transitionName="input" />
 
         <Button
             android:id="@+id/viewpagerButton"
@@ -101,6 +102,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start LaunchModeActivity" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Location Permission Page" />
+
     </LinearLayout>
 
 </ScrollView>

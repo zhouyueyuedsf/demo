@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 允许http请求 -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+<!--    <domain-config>-->
+<!--        <domain includeSubdomains="true">inter.youdao.com</domain>-->
+<!--        <domain includeSubdomains="true">d1e0dtlz2jooy2.cloudfront.net</domain>-->
+<!--        <trust-anchors>-->
+<!--            <certificates src="@raw/joy"/>-->
+<!--            <certificates src="@raw/hy"/>-->
+<!--            <certificates src="system"/>-->
+<!--        </trust-anchors>-->
+<!--    </domain-config>-->
+
+</network-security-config>

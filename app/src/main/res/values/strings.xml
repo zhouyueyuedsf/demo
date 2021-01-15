@@ -114,4 +114,5 @@
     <string name="ocr_guide_line_tip">Parallel to reference lines</string>
 
     <string name="my_appbar_scrolling_view_behavior" translatable="false">com.example.demo.views.material.MyScrollBehavior</string>
+    <string name="location_rationale">request location permission</string>
 </resources>
