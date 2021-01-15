@@ -1,9 +1,6 @@
 package com.example.demo.http
 
-import com.example.demo.gps.BaseModel
-import com.example.demo.gps.NearByResult
-import com.example.demo.gps.RealTimeInfo
-import com.example.demo.gps.StationRoutes
+import com.example.demo.gps.*
 import retrofit2.http.*
 
 interface Query8864Api {
@@ -29,6 +26,10 @@ interface Query8864Api {
                                 @Query("to_station_name") to_station_name: String,
                                 @Query("appkey") appkey: String = "Yv9cL8wTwZgr"): RealTimeInfo
 
-    @GET("bus_position_1.php?ecity=beijing&line_name=963路&to_station_name=龙泉驾校&appkey=Yv9cL8wTwZgr")
-    suspend fun realTimeBusInfo(): String
+    @FormUrlEncoded
+    @POST("bus_api_v1.php")
+    suspend fun stationLineStartAndEndList(@Field("k") k: String,
+                                           @Field("ecity") ecity: String,
+                                           @Field("q") q: String,
+                                           @Field("appkey") appkey: String = "Yv9cL8wTwZgr"): BaseModel<List<StationStartAndEnd>>
 }

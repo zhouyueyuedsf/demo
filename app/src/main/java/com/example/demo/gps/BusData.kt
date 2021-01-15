@@ -24,6 +24,7 @@ data class RouteInfo(val id: String,
                      val code: String,
                      val shuzi: String)
 
+//
 data class RealTimeInfo(val line_info: LineInfo,
                         val stations: List<SimpleStations>,
                         val timestamp: Int)
@@ -36,3 +37,15 @@ data class LineInfo(val bus_staname: String,
 data class SimpleStations(val station_name: String,
                           val zhan: String,
                           val code: String)
+
+
+
+data class StationStartAndEnd(val id: String,
+                              val busname: String,
+                              val t_name_1: String,
+                              val t_name_2: String,
+                              val tid: String,
+                              val kind: String,
+                              val pm: String,
+                              val code: String)
+
