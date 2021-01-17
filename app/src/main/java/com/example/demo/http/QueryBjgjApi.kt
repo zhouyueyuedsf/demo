@@ -1,7 +1,6 @@
 package com.example.demo.http
 
 import com.example.demo.gps.BaseModel
-import com.example.demo.gps.NearByResult
 import com.example.demo.gps.StationRoutes
 import retrofit2.http.*
 

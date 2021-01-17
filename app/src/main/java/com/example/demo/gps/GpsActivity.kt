@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.demo.R
 import com.example.demo.http.RetrofitClient
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -34,12 +35,14 @@ class GpsActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         val perms = arrayOf(Manifest.permission.ACCESS_FINE_LOCATION)
         if (EasyPermissions.hasPermissions(this, *perms)) {
             // Already have permission, do the thing
-            lifecycleScope.launch() {
+            lifecycleScope.launch(CoroutineExceptionHandler { coroutineContext, throwable ->
+                throw throwable
+            }) {
                 val nearByResult = withContext(Dispatchers.IO) {
                     RetrofitClient.instance.query8864Api.nearBusByLocation("find_zhans_by_jwd", "beijing", "116.282071", "40.048732", "3")
                 }
                 Log.d("yyyyyy", "nearBusByLocation data $nearByResult")
-                // 后厂村路，后厂村东路，永丰路南站
+                // 后厂村路A，后厂村路B， 后厂村东路A，后厂村东路B, 永丰路南站A,永丰路南站B
                 val stationRoutes = nearByResult.data
                 val startAndEndList = withContext(Dispatchers.IO) {
                     val res = arrayListOf<StationStartAndEnd>()
@@ -58,6 +61,7 @@ class GpsActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
                     // https://api.8684.cn/bus_position_1.php?ecity=beijing&line_name=963路&to_station_name=龙泉驾校&appkey=Yv9cL8wTwZgr
                     startAndEndList.forEach {
                         res.add(RetrofitClient.instance.query8864Api.realTimeBusInfo("beijing", it.busname, it.t_name_1))
+                        res.add(RetrofitClient.instance.query8864Api.realTimeBusInfo("beijing", it.busname, it.t_name_2))
                     }
                     res
                 }

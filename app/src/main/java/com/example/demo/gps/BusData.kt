@@ -1,10 +1,6 @@
 package com.example.demo.gps
 
 
-data class NearByResult(
-    val data: List<StationRoutes>
-)
-
 /**
  * 一个公交站拥有的公交路线
  */
