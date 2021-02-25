@@ -85,7 +85,7 @@
         android:id="@+id/etTest"
         android:text="123"
         android:layoutDirection="rtl"
-        android:layout_width="200dp "
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="370dp"/>
 
@@ -113,14 +113,9 @@
             android:text="123" />
     </LinearLayout>
 
-    <com.example.demo.views.PaletteTextView
-        android:visibility="gone"
+    <com.example.demo.views.MyCanvasView
+        android:background="@android:color/black"
+        android:layout_marginTop="300dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="400dp"
-        android:textColor="@color/white"
-        android:text="n. गिनती; सामंत; गणना;आरोप; अभियोग का विषय; संख्या;\n v. गणना करना; गिनना; गिनती करना "
-        app:palette_src="@mipmap/lockscreen_bg_1"
-        tools:background="@mipmap/lockscreen_bg_1" />
+        android:layout_height="500dp"/>
 </FrameLayout>
