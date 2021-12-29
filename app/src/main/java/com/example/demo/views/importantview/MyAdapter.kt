@@ -18,12 +18,12 @@ class MyAdapter() : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
         this.data = data
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view: View = LayoutInflater.from(context).inflate(R.layout.simple_item, null)
+        val view: View = LayoutInflater.from(context).inflate(R.layout.simple_item, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvItem.text = data[position]
+//        holder.layoutItem.text = data[position]
     }
 
     override fun getItemCount(): Int {
@@ -32,9 +32,6 @@ class MyAdapter() : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvItem: TextView = itemView.findViewById(R.id.tv_item)
+        var layoutItem: View = itemView.findViewById(R.id.layout_item)
     }
-
-
-
 }

@@ -48,6 +48,7 @@
 
     <ImageView
         android:id="@+id/guide_view"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/guide_page2" />
@@ -114,8 +115,18 @@
     </LinearLayout>
 
     <com.example.demo.views.MyCanvasView
+        android:visibility="gone"
         android:background="@android:color/black"
         android:layout_marginTop="300dp"
         android:layout_width="match_parent"
         android:layout_height="500dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="30dp"
+        android:layout_gravity="center"
+        app:cardMaxElevation="100dp"
+        android:layout_width="350dp"
+        android:layout_height="200dp"/>
 </FrameLayout>

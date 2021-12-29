@@ -16,6 +16,7 @@ import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.updateLayoutParams
 import com.airbnb.lottie.LottieDrawable
@@ -23,7 +24,7 @@ import com.example.demo.R
 import com.example.demo.utils.DeviceOrientationEventListener
 import com.example.demo.utils.dp
 import com.example.demo.viewpagers.ViewpagerActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.demo.views.importantview.ImportantViewActivity
 import kotlinx.android.synthetic.main.activity_view.*
 
 
@@ -105,6 +106,22 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
         }
         viewpagerEnter.setOnClickListener {
             routerTo(ViewpagerActivity::class.java)
+        }
+        button1.setOnClickListener {
+//            routerTo(ImportantViewActivity::class.java)
+//            cardView.animate().setDuration(500).translationX(400f)
+            ValueAnimator.ofFloat(1f, 0.2f).apply {
+                duration = 500
+                addUpdateListener {
+                    val v = it.animatedValue as Float
+                    cardView.scaleX = v
+                    cardView.scaleY = v
+                }
+            }.start()
+        }
+
+        cardView.setOnClickListener {
+            Toast.makeText(this, "click cardView", Toast.LENGTH_SHORT).show()
         }
     }
 

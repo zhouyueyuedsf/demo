@@ -22,24 +22,20 @@ class MyApplication : Application() {
             Log.d("joy", "${PreferenceUtils.getLong("user_use_time_stream", -1)}")
         }
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-            override fun onActivityPaused(activity: Activity?) {
+            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
             }
 
-            override fun onActivityResumed(activity: Activity?) {
-
-            }
-
-            override fun onActivityStarted(activity: Activity?) {
+            override fun onActivityStarted(activity: Activity) {
                 PreferenceUtils.putLong("user_foreground_time_stream", System.currentTimeMillis())
             }
 
-            override fun onActivityDestroyed(activity: Activity?) {
+            override fun onActivityResumed(activity: Activity) {
             }
 
-            override fun onActivitySaveInstanceState(activity: Activity?, outState: Bundle?) {
+            override fun onActivityPaused(activity: Activity) {
             }
 
-            override fun onActivityStopped(activity: Activity?) {
+            override fun onActivityStopped(activity: Activity) {
                 val lastForegroundStartTime = PreferenceUtils.getLong("user_foreground_time_stream", -1)
                 if (lastForegroundStartTime >= 0) {
                     val lastUserUseTime = PreferenceUtils.getLong("user_use_time_stream", 0)
@@ -47,8 +43,12 @@ class MyApplication : Application() {
                 }
             }
 
-            override fun onActivityCreated(activity: Activity?, savedInstanceState: Bundle?) {
+            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {
             }
+
+            override fun onActivityDestroyed(activity: Activity) {
+            }
+
         })
     }
 

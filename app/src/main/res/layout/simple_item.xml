@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tv_item"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="10dp"
-    android:textSize="20sp" />
+<com.example.demo.views.importantview.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:gravity="center"
+    android:background="#444444">
+    <com.example.demo.views.importantview.MyButton
+        android:text="测试Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.example.demo.views.importantview.MyLinearLayout>

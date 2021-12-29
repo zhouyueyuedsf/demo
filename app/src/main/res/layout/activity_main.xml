@@ -109,6 +109,17 @@
             android:layout_height="wrap_content"
             android:text="Start Location Permission Page" />
 
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Binder Page" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Media Page" />
     </LinearLayout>
 
 </ScrollView>

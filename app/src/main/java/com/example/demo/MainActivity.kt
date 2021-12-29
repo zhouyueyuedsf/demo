@@ -12,9 +12,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.demo.advanced.ashmem.Client
 import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.behaviors.BehaviorActivity
+import com.example.demo.binder.BinderActivity
 import com.example.demo.gps.GpsActivity
 import com.example.demo.lanuchmode.LaunchModeActivity
 import com.example.demo.lifecycle.SettingsActivity
+import com.example.demo.media.MediaActivity
 import com.example.demo.performance.PerformanceActivity
 import com.example.demo.performance.ScrollingActivity
 import com.example.demo.services.ServiceActivity
@@ -102,6 +104,14 @@ class MainActivity : AppCompatActivity() {
 
         button12.setOnClickListener {
             routerTo(GpsActivity::class.java)
+        }
+
+        button13.setOnClickListener {
+            routerTo(BinderActivity::class.java)
+        }
+
+        button14.setOnClickListener {
+            routerTo(MediaActivity::class.java)
         }
     }
 
