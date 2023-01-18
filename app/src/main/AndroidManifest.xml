@@ -20,7 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".media.MediaActivity"/>
+        <activity
+            android:name=".views.toolbar.ToolbarActivity"
+            android:exported="false" />
+        <activity android:name=".media.MediaActivity" />
         <activity android:name=".binder.BinderActivity" />
         <activity android:name=".gps.GpsActivity" />
         <activity
@@ -54,7 +57,7 @@
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait" />
         <activity android:name=".viewpagers.ViewpagerActivity" />
-        <activity android:name=".views.ViewActivity" />
+        <activity android:name=".views.ViewActivity" android:launchMode="singleTask"/>
         <activity android:name=".behaviors.BehaviorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -39,7 +39,9 @@ class MyLinearLayout(context: Context, attributeSet: AttributeSet) : LinearLayou
                 stopNestedScroll(ViewCompat.TYPE_TOUCH)
             }
         }
-        return super.onInterceptTouchEvent(ev)
+        return super.onInterceptTouchEvent(ev).also {
+            Log.d("eventStudy", "MyLinearLayout onInterceptTouchEvent: $it ${ev?.action}")
+        }
     }
 
     override fun setNestedScrollingEnabled(enabled: Boolean) {

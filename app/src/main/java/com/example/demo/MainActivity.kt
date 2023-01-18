@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.KeyEvent
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
+import com.blankj.utilcode.util.GsonUtils
 import com.example.demo.advanced.ashmem.Client
 import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.behaviors.BehaviorActivity
@@ -18,6 +19,7 @@ import com.example.demo.lanuchmode.LaunchModeActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.media.MediaActivity
 import com.example.demo.performance.PerformanceActivity
+import com.example.demo.views.toolbar.ToolbarActivity
 import com.example.demo.performance.ScrollingActivity
 import com.example.demo.services.ServiceActivity
 import com.example.demo.sourcecodelab.SourceActivity
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         button1.setOnClickListener {
             routerTo(BehaviorActivity::class.java)
         }
+
         button2.setOnClickListener {
 //            val intent = Intent(this, ViewActivity::class.java)
 ////            intent.flags = (Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -53,12 +56,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         button2_1.setOnClickListener {
-            val intent = Intent(this, PerformanceActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, PerformanceActivity::class.java)
+//            startActivity(intent)
 
             val intent2 = Intent(this, ViewActivity::class.java)
-//            intent.flags = (Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent2.flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent2)
+
+
+            val intent3 = Intent(this, ViewActivity::class.java)
+
+            Handler().postDelayed({
+                intent3.flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent3)
+                                  },500L)
 
         }
         viewpagerButton.setOnClickListener {
@@ -79,10 +90,20 @@ class MainActivity : AppCompatActivity() {
         button8.setOnClickListener {
             routerTo(MMKVActivity::class.java)
         }
+
+        test_hover_image.setOnHoverListener { v, event ->
+            Log.d("yyyyyy", "onCreate: ${event.action}")
+            true
+        }
+
         button9.setOnClickListener {
+//            {"cv":0.0,"cw":0.0,"h":1.3503447387640795,"hv":0.0,"hw":0.0,"l":Infinity,"r":0.0}
+            Log.i("yyyyyyyyyyyyyyyyyyy", "onCreate: onCollect start")
+            CtlDataReceiverContract.onCollect(this, 3000, 1000, "{\"cv\":0.0,\"cw\":0.0,\"h\":1.3503447387640795,\"hv\":0.0,\"hw\":0.0,\"l\":Infinity,\"r\":0.0}")
+            Log.i("yyyyyyyyyyyyyyyyyyy", "onCreate: onCollect end")
 //            DialogUtils.showMagicNoticeDialog(MyApplication.getInstance())
-            val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
-            startActivity(intent)
+//            val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
+//            startActivity(intent)
 //            if (context is Activity) {
 //                (context as Activity).overridePendingTransition(0, 0)
 //            }
@@ -112,6 +133,10 @@ class MainActivity : AppCompatActivity() {
 
         button14.setOnClickListener {
             routerTo(MediaActivity::class.java)
+        }
+
+        button15.setOnClickListener {
+            routerTo(ToolbarActivity::class.java)
         }
     }
 

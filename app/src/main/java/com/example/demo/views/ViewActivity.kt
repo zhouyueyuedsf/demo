@@ -43,14 +43,13 @@ class ViewWrapper(val view: View) {
 class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDeviceOrientationChangedListener {
     val choreographer = Choreographer.getInstance()
     val TAG = this.javaClass.name
-
     override fun attachBaseContext(newBase: Context?) {
         Log.d("yyyyyy", "ViewActivity attachBaseContext $newBase")
         super.attachBaseContext(newBase)
     }
 
     override fun onNewIntent(intent: Intent?) {
-        Log.d("yyyyyyyy", "ViewActivity run onNewIntent")
+        Log.d("yyyyyy", "ViewActivity run onNewIntent")
         super.onNewIntent(intent)
     }
 
@@ -127,7 +126,7 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
 
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "onResume")
+        Log.d("yyyyyy", "onResume ${this.intent.hashCode()}")
     }
 
     private fun showGuideTvAlphaAnim() {

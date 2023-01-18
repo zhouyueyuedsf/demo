@@ -14,7 +14,9 @@ class MyRecyclerView(context: Context, attributeSet: AttributeSet) : RecyclerVie
             parent.requestDisallowInterceptTouchEvent(true)
         }
         Log.d("eventStudy", "MyRecyclerView onInterceptTouchEvent action: ${e?.action}")
-        return super.onInterceptTouchEvent(e)
+        return super.onInterceptTouchEvent(e).also {
+            Log.d("eventStudy", "MyRecyclerView onInterceptTouchEvent isIntercept: ${it} ")
+        }
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
