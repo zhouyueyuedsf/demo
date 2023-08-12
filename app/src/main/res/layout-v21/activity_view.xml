@@ -129,4 +129,19 @@
         app:cardMaxElevation="100dp"
         android:layout_width="350dp"
         android:layout_height="200dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_marginTop="500dp"
+        android:theme="@style/Theme.MaterialComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.demo.views.flowlayout.MyChip
+            android:text="112312"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.example.demo.views.flowlayout.MyChip
+            android:text="11fadfa2312"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.chip.ChipGroup>
 </FrameLayout>

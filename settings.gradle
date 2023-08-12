@@ -1,2 +1,4 @@
 include ':gradlestudy'
 include ':gradle-plugin', ':app'
+include ':effect'
+include ':annotation'

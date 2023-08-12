@@ -4,11 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".binder.BinderActivity">
+    tools:context=".binder.client.BinderActivity">
 
     <Button
         android:id="@+id/buttonGoToLauncher"
         android:text="跳转首页"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnBindProvider"
+        android:text="获取binder服务端数据"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>

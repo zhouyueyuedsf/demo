@@ -2,6 +2,7 @@ package com.example.demo
 
 import android.app.Activity
 import android.app.Application
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import com.example.demo.utils.PreferenceUtils
@@ -14,6 +15,10 @@ class MyApplication : Application() {
         }
     }
 
+    override fun attachBaseContext(base: Context?) {
+        Log.i("yyyyyyyy", "attachBaseContext: ")
+        super.attachBaseContext(base)
+    }
     override fun onCreate() {
         super.onCreate()
 //        Log.d("joy", Thread.currentThread().toString())
