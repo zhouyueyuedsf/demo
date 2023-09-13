@@ -36,6 +36,7 @@ class BinderActivity : AppCompatActivity() {
         btnBindProvider.setOnClickListener {
             val cursor = contentResolver.query(Uri.parse("content://com.joyzhou.demo"), null, null, null, null)
             try {
+
                 val service = IMyAidlInterface.Stub.asInterface(cursor?.extras?.getBinder(
                     "key_binder_count"
                 ))
