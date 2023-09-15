@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.content.res.Resources
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -18,6 +19,8 @@ import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.drawable.toBitmap
+import androidx.core.view.doOnNextLayout
 import androidx.core.view.updateLayoutParams
 import com.airbnb.lottie.LottieDrawable
 import com.example.demo.R
@@ -122,6 +125,13 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
         cardView.setOnClickListener {
             Toast.makeText(this, "click cardView", Toast.LENGTH_SHORT).show()
         }
+        iv_mem_1.doOnNextLayout {
+            val bitmap1 = iv_mem_1.drawable.toBitmap(iv_mem_1.width, iv_mem_1.height)
+            Log.i(TAG, "bitmap size: ${bitmap1.byteCount}")
+        }
+
+        val bitmap2 = iv_mem_2.drawable.toBitmap()
+        Log.i(TAG, "bitmap size: ${bitmap2.byteCount}")
     }
 
     override fun onResume() {

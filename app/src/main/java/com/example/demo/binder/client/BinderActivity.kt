@@ -34,7 +34,7 @@ class BinderActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnBindProvider.setOnClickListener {
-            val cursor = contentResolver.query(Uri.parse("content://com.joyzhou.demo"), null, null, null, null)
+            val cursor = contentResolver.query(Uri.parse("content://com.example.demo.binder.sever"), null, null, null, null)
             try {
 
                 val service = IMyAidlInterface.Stub.asInterface(cursor?.extras?.getBinder(

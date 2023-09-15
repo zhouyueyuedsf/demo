@@ -144,4 +144,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </com.google.android.material.chip.ChipGroup>
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:src="@drawable/guide_page2"
+        android:id="@+id/iv_mem_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/iv_mem_2"
+        android:src="@drawable/guide_page2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 </FrameLayout>

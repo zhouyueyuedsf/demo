@@ -3,15 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.demo">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 允许应用程序访问额外的位置提供命令 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <queries>
         <package android:name="com.example.gradledemo" />
     </queries>
+
+
+    <permission android:name="com.example.send_perm"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -21,17 +29,32 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".broadcast.BroadcastActivity"
+            android:process=":broad"
+            android:exported="false" />
+
+        <receiver android:name=".broadcast.MyReceiver" android:enabled="true" android:exported="true"
+            android:permission="com.example.send_perm">
+            <intent-filter>
+                <action android:name="my_action" />
+            </intent-filter>
+
+        </receiver>
+
         <provider
-            android:name="com.example.demo.binder.sever.BinderProvider"
+            android:name=".binder.sever.BinderProvider"
             android:authorities="com.example.demo.binder.sever"
-            android:process="com.example.demo"
-            android:exported="true"/>
+            android:exported="true"
+            android:process="com.example.demo" />
 
         <activity
             android:name=".views.toolbar.ToolbarActivity"
             android:exported="false" />
         <activity android:name=".media.MediaActivity" />
-        <activity android:name=".binder.client.BinderActivity" />
+        <activity
+            android:name=".binder.client.BinderActivity"
+            android:process="com.example.demo.binder" />
         <activity android:name=".gps.GpsActivity" />
         <activity
             android:name=".lanuchmode.task2.DLaunchModeActivity"
@@ -91,9 +114,7 @@
             android:name=".advanced.mmkv.MMKVServer"
             android:enabled="true"
             android:process=".mmkv" />
-        <service
-            android:name=".services.MyService"
-            android:process=":MyService" />
+        <service android:name=".services.MyService" />
     </application>
 
 </manifest>

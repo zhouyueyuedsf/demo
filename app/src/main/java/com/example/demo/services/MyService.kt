@@ -5,6 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.IBinder
+import android.os.Looper
+import android.util.Log
+import android.util.LogPrinter
 import androidx.annotation.StringRes
 import androidx.core.app.NotificationCompat
 import com.example.demo.R
@@ -16,12 +19,16 @@ class MyService : Service() {
     }
 
     override fun onCreate() {
-        startForeground(123, getNotification(this))
+        Log.i("yyyyyyyyy", "MyService: onCreate")
+        Looper.getMainLooper().dump(LogPrinter(Log.VERBOSE, "yyyyyyy"), "PREFIX")
+        Thread.sleep(10000)
         super.onCreate()
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-
+//        Thread.sleep(10000)
+        Log.i("yyyyyyyyy", "MyService: onStartCommand")
+        startForeground(123, getNotification(this))
         return super.onStartCommand(intent, flags, startId)
     }
 

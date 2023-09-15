@@ -12,6 +12,7 @@ import com.example.demo.advanced.ashmem.Client
 import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.behaviors.BehaviorActivity
 import com.example.demo.binder.client.BinderActivity
+import com.example.demo.broadcast.BroadcastActivity
 import com.example.demo.gps.GpsActivity
 import com.example.demo.lanuchmode.LaunchModeActivity
 import com.example.demo.lifecycle.SettingsActivity
@@ -133,6 +134,10 @@ class MainActivity : AppCompatActivity() {
 
         button15.setOnClickListener {
             routerTo(ToolbarActivity::class.java)
+        }
+
+        button16.setOnClickListener {
+            routerTo(BroadcastActivity::class.java)
         }
     }
 
