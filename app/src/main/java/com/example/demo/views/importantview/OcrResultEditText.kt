@@ -49,7 +49,7 @@ class OcrResultEditText(context: Context, attributeSet: AttributeSet) : AppCompa
             Log.d("InputConnectionFix", "selectionStart: $selectionStart selectionEnd: $selectionEnd" )
             if (beforeLength == 1 && afterLength == 0) {
                 val text = getTextBeforeCursor(selectionStart, 0)
-                var end = text.length - 1
+                var end = text!!.length - 1
                 while (end > 0 && text[--end] == '\n') {
                     sendKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DEL)) && sendKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DEL))
                 }

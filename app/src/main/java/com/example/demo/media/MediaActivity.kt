@@ -11,6 +11,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Surface
 import android.view.TextureView
+import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.demo.R
 import kotlinx.android.synthetic.main.activity_media.*
 
@@ -25,6 +27,21 @@ class MediaActivity : AppCompatActivity(), TextureView.SurfaceTextureListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_media)
         initMedia()
+        val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
+            // Callback is invoked after the user selects a media item or closes the
+            // photo picker.
+            if (uri != null) {
+                Log.d("PhotoPicker", "Selected URI: $uri")
+            } else {
+                Log.d("PhotoPicker", "No media selected")
+            }
+        }
+
+// Include only one of the following calls to launch(), depending on the types
+// of media that you want to let the user choose from.
+
+// Launch the photo picker and let the user choose images and videos.
+        pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageAndVideo))
     }
 
     private fun initMedia() {

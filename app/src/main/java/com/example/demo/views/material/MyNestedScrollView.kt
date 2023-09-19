@@ -14,7 +14,7 @@ class MyNestedScrollView(context: Context, attributeSet: AttributeSet) : NestedS
         return super.dispatchTouchEvent(ev)
     }
 
-    override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
+    override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
 
         Log.d("eventStudy", "MyNestedScrollView onInterceptTouchEvent action: ${ev?.action}")
         val b = super.onInterceptTouchEvent(ev)
@@ -30,7 +30,7 @@ class MyNestedScrollView(context: Context, attributeSet: AttributeSet) : NestedS
         super.onLayout(changed, l, t, r, b)
     }
 
-    override fun onTouchEvent(ev: MotionEvent?): Boolean {
+    override fun onTouchEvent(ev: MotionEvent): Boolean {
         Log.d("eventStudy", "MyNestedScrollView onTouchEvent action: ${ev?.action}")
         return super.onTouchEvent(ev)
     }

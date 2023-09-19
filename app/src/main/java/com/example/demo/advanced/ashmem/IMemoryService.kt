@@ -49,7 +49,7 @@ interface IMemoryService : IInterface {
 
                     if (result != null) {
                         reply?.writeInt(1)
-                        result.writeToParcel(reply, 0)
+                        result.writeToParcel(reply!!, 0)
                     } else {
                         reply?.writeInt(0)
                     }

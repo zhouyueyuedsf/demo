@@ -80,28 +80,25 @@ class ViewActivity : AppCompatActivity(), DeviceOrientationEventListener.OnDevic
         }
 
 //        showAlphaAnim()
-        lottieAnimationView?.addAnimatorListener(object : Animator.AnimatorListener {
-            override fun onAnimationRepeat(animation: Animator?) {
-                Log.d("yyyyyy", "onAnimationRepeat")
-            }
-
-            override fun onAnimationEnd(animation: Animator?, isReverse: Boolean) {
-                Log.d("yyyyyy", "onAnimationEnd isReverse")
-            }
-
-            override fun onAnimationEnd(animation: Animator?) {
-                Log.d("yyyyyy", "onAnimationEnd")
-            }
-
-            override fun onAnimationCancel(animation: Animator?) {
-                Log.d("yyyyyy", "onAnimationCancel")
-            }
-
-            override fun onAnimationStart(animation: Animator?) {
-                Log.d("yyyyyy", "animation start")
-                showGuideTvAlphaAnim()
-            }
-        })
+//        lottieAnimationView?.addAnimatorListener(object : Animator.AnimatorListener {
+//
+//
+//            override fun onAnimationStart(p0: Animator) {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onAnimationEnd(p0: Animator) {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onAnimationCancel(p0: Animator) {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onAnimationRepeat(p0: Animator) {
+//                TODO("Not yet implemented")
+//            }
+//        })
         lottieAnimationView.post {
             Log.d("yyyyyy", "lottieAnimationView start ")
             lottieAnimationView.playAnimation()
