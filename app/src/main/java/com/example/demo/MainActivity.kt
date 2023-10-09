@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.KeyEvent
 import android.view.Window
@@ -13,7 +14,9 @@ import com.example.demo.advanced.mmkv.MMKVActivity
 import com.example.demo.behaviors.BehaviorActivity
 import com.example.demo.binder.client.BinderActivity
 import com.example.demo.broadcast.BroadcastActivity
+import com.example.demo.event.EventActivity
 import com.example.demo.gps.GpsActivity
+import com.example.demo.hardware.HardWareInfoActivity
 import com.example.demo.lanuchmode.LaunchModeActivity
 import com.example.demo.lifecycle.SettingsActivity
 import com.example.demo.media.MediaActivity
@@ -25,7 +28,15 @@ import com.example.demo.utils.PreferenceUtils
 import com.example.demo.viewpagers.ViewpagerActivity
 import com.example.demo.views.ViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
+class ThreadTest {
+    fun f() {
+        val thread = Looper.getMainLooper().thread
+        Log.i("yyyyyyyy", "f: ${Thread.currentThread()} ${thread}")
+    }
+}
 class MainActivity : AppCompatActivity() {
 
     override fun onNewIntent(intent: Intent?) {
@@ -35,10 +46,13 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         super.onCreate(savedInstanceState)
         Log.d("joy", Thread.currentThread().toString())
         setContentView(R.layout.activity_main)
+        GlobalScope.launch {
+            ThreadTest().f()
+        }
         button1.setOnClickListener {
             routerTo(BehaviorActivity::class.java)
         }
@@ -138,6 +152,14 @@ class MainActivity : AppCompatActivity() {
 
         button16.setOnClickListener {
             routerTo(BroadcastActivity::class.java)
+        }
+
+        button17.setOnClickListener {
+            routerTo(EventActivity::class.java)
+        }
+
+        button18.setOnClickListener {
+            routerTo(HardWareInfoActivity::class.java)
         }
     }
 

@@ -133,6 +133,18 @@
             android:layout_height="wrap_content"
             android:text="start broadcaset act" />
 
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start event act" />
+
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start hardware act" />
+
         <ImageView
             android:focusable="true"
             android:clickable="true"

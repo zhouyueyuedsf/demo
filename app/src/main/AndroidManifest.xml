@@ -6,6 +6,7 @@
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 允许应用程序访问额外的位置提供命令 -->
@@ -13,13 +14,13 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
     <queries>
         <package android:name="com.example.gradledemo" />
     </queries>
 
+    <permission android:name="com.example.send_perm" />
 
-    <permission android:name="com.example.send_perm"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -30,16 +31,24 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".broadcast.BroadcastActivity"
-            android:process=":broad"
+            android:name=".hardware.HardWareInfoActivity"
             android:exported="false" />
+        <activity
+            android:name=".event.EventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".broadcast.BroadcastActivity"
+            android:exported="false"
+            android:process=":broad" />
 
-        <receiver android:name=".broadcast.MyReceiver" android:enabled="true" android:exported="true"
+        <receiver
+            android:name=".broadcast.MyReceiver"
+            android:enabled="true"
+            android:exported="true"
             android:permission="com.example.send_perm">
             <intent-filter>
                 <action android:name="my_action" />
             </intent-filter>
-
         </receiver>
 
         <provider
@@ -51,70 +60,80 @@
         <activity
             android:name=".views.toolbar.ToolbarActivity"
             android:exported="false" />
-        <activity android:name=".media.MediaActivity" />
+        <activity android:name=".media.MediaActivity" android:exported="false" />
         <activity
             android:name=".binder.client.BinderActivity"
-            android:process="com.example.demo.binder" />
-        <activity android:name=".gps.GpsActivity" />
+            android:process="com.example.demo.binder" android:exported="false"/>
+        <activity android:name=".gps.GpsActivity" android:exported="false"/>
         <activity
+            android:exported="false"
             android:name=".lanuchmode.task2.DLaunchModeActivity"
             android:taskAffinity=".task2" />
         <activity
+            android:exported="false"
             android:name=".lanuchmode.task2.CLaunchModeActivity"
             android:launchMode="singleTask"
             android:taskAffinity=".task2" />
         <activity
+            android:exported="false"
             android:name=".lanuchmode.task1.BLaunchModeActivity"
             android:taskAffinity=".task1" />
         <activity
+            android:exported="false"
             android:name=".lanuchmode.task1.ALaunchModeActivity"
             android:launchMode="singleTask"
             android:taskAffinity=".task1" />
-        <activity android:name=".lanuchmode.LaunchModeActivity" />
+        <activity android:name=".lanuchmode.LaunchModeActivity" android:exported="false"/>
         <activity
+            android:exported="false"
             android:name=".views.hindictocrlab.HindictLabActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".views.importantview.ImportantViewActivity" />
-        <activity android:name=".advanced.mmkv.ProcessActivity" />
-        <activity android:name=".sourcecodelab.SourceActivity" />
-        <activity android:name=".performance.PerformanceActivity" />
+        <activity android:name=".views.importantview.ImportantViewActivity" android:exported="false"/>
+        <activity android:name=".advanced.mmkv.ProcessActivity" android:exported="false"/>
+        <activity android:name=".sourcecodelab.SourceActivity" android:exported="false"/>
+        <activity android:name=".performance.PerformanceActivity" android:exported="false"/>
         <activity
+            android:exported="false"
             android:name=".performance.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:exported="false"
             android:name=".lifecycle.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait" />
-        <activity android:name=".viewpagers.ViewpagerActivity" />
+        <activity android:name=".viewpagers.ViewpagerActivity" android:exported="false"/>
         <activity
+            android:exported="false"
             android:name=".views.ViewActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".behaviors.BehaviorActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".behaviors.BehaviorActivity" android:exported="false"/>
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".advanced.ashmem.Client" />
-        <activity android:name=".advanced.mmkv.MMKVActivity" />
-        <activity android:name=".services.ServiceActivity" />
+        <activity android:name=".advanced.ashmem.Client" android:exported="false"/>
+        <activity android:name=".advanced.mmkv.MMKVActivity" android:exported="false"/>
+        <activity android:name=".services.ServiceActivity" android:exported="false"/>
         <activity
             android:name=".views.AccessibilityGuideActivity"
-            android:theme="@style/Theme.DialogActivity" />
+            android:theme="@style/Theme.DialogActivity" android:exported="false"/>
 
         <service
             android:name=".advanced.ashmem.Server"
             android:enabled="true"
+            android:exported="false"
             android:permission="TODO"
             android:process=".Server" />
         <service
             android:name=".advanced.mmkv.MMKVServer"
             android:enabled="true"
+            android:exported="false"
             android:process=".mmkv" />
-        <service android:name=".services.MyService" />
+        <service android:name=".services.MyService" android:exported="false" />
     </application>
 
 </manifest>
