@@ -19,7 +19,7 @@ object MMKVUtil {
     }
 
     fun getString(key: String, default: String): String {
-        return MMKV.mmkvWithID(MMAP_ID, MMKV.MULTI_PROCESS_MODE).decodeString(key)
+        return MMKV.mmkvWithID(MMAP_ID, MMKV.MULTI_PROCESS_MODE)?.decodeString(key) ?: ""
     }
 
     fun containKey(key: String): Boolean {

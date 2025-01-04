@@ -5,5 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="white">#FFFFFF</color>
     <color name="button_pressed">#1E000000</color>
-    <color name="BGInput">#0D161823</color>
+    <color name="BGInput">#000000</color>
 </resources>

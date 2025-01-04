@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cardview_dark_background" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+
+    </item>
+    <item android:gravity="center" android:drawable="@drawable/ic_baseline_arrow_back_24">
+    </item>
+
+</layer-list>

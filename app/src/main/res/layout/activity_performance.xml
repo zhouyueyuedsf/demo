@@ -30,7 +30,18 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-<!--    <include layout="@layout/content_scrolling" />-->
+    <Button
+        android:id="@+id/change_model"
+        android:text="切换模式"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/start_scroll"
+        android:text="开始滚动"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <com.example.demo.views.importantview.MyLinearLayout
         app:layout_behavior="@string/appbar_scrolling_view_behavior"

@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false"
+    android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/mask"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="center_vertical"
-        android:maxWidth="220dp"
-        android:textColor="@color/white"
-        android:textSize="12dp"
-        android:translationY="6dp"
-        app:layout_constraintBottom_toTopOf="@id/gif"
-        app:layout_constraintStart_toStartOf="@id/gif" />
+        android:minWidth="300dp"
+        android:clipChildren="false"
+        android:layout_height="100dp">
+        <TextView
+            android:id="@+id/tv2"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#99161823"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            app:layout_constraintTop_toTopOf="@id/tv1"
+            app:layout_constraintBottom_toBottomOf="@id/tv1"
+            android:text="朋友" />
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/gif_accessibility_guide"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:loopCount="0" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv1"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            tools:text="测试～测试～测试～测试～测试～测试～测试～" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:maxWidth="220dp"
-        android:textColor="@color/white"
-        android:textSize="11dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gif" />
+    <FrameLayout
+        android:layout_marginStart="100dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

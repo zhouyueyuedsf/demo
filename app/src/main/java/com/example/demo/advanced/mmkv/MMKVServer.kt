@@ -23,7 +23,7 @@ class MMKVServer : Service() {
 
         MMKV.initialize(this)
         val mmkv = MMKV.mmkvWithID("InterProcessKV", MMKV.MULTI_PROCESS_MODE).decodeString("MMKV_PUT_STRING", "")
-        Log.d("PUT_STRING", mmkv)
+//        Log.d("PUT_STRING", mmkv)
         print(mmkv)
         super.onCreate()
     }

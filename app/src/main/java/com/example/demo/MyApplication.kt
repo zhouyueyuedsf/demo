@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.demo.utils.PreferenceUtils
 
 class MyApplication : Application() {
@@ -21,6 +22,7 @@ class MyApplication : Application() {
     }
     override fun onCreate() {
         super.onCreate()
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 //        Log.d("joy", Thread.currentThread().toString())
         instance = this
         if (PreferenceUtils.getLong("user_use_time_stream", -1) >= 0) {
